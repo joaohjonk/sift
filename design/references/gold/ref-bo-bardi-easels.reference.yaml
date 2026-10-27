@@ -1,0 +1,25 @@
+id: ref-bo-bardi-easels
+kind: image
+library: gold
+source_domain: 'museum display: Lina Bo Bardi, crystal easels, MASP 1968'
+distance: middle
+rights:
+  status: inspiration_only
+  notes: described, nothing stored
+credit: Lina Bo Bardi, MASP (1968)
+captured_at: '2026-10-27'
+retrieved_via: manual
+transferable_mechanism: The painting floats on glass; its record card is on the back,
+  visible to anyone who walks around. Work and information are one object.
+mechanism_tags: []
+transfer: The kept piece is the front; the record is its back. A tap turns the card
+  to show contract, date and payment (law 7).
+do_not_copy:
+- its look, colours or type
+why_it_works: The painting floats on glass; its record card is on the back, visible
+  to anyone who walks around. Work and information are one object.
+surfaces:
+- Sift Page
+- Sift Record
+approval: current
+decided_by: JJ (brand/16_flows research, 2 Oct 2026)

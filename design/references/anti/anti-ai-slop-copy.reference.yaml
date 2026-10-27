@@ -1,0 +1,21 @@
+id: anti-ai-slop-copy
+kind: text
+library: anti
+source_domain: model-written marketing copy
+distance: near
+rights:
+  status: inspiration_only
+  notes: composite of a convention, no source stored
+transferable_mechanism: (what to avoid) 'In a world of endless choices...', 'not X
+  but Y', triplets, dashes, unlock and elevate.
+mechanism_tags: []
+transfer: WRITING.md tests; banned_language list.
+do_not_copy:
+- everything here is an anti pattern
+why_it_fails: '''In a world of endless choices...'', ''not X but Y'', triplets, dashes,
+  unlock and elevate.'
+anti_category: too_ai
+surfaces:
+- all
+approval: current
+decided_by: JJ (BRAND.md v3 forbidden list)

@@ -1,0 +1,21 @@
+id: anti-beige-serif-burgundy
+kind: image
+library: anti
+source_domain: quiet luxury default
+distance: near
+rights:
+  status: inspiration_only
+  notes: composite of a convention, no source stored
+transferable_mechanism: '(what to avoid) Beige ground, a serif and burgundy accents:
+  the look every ''tasteful'' brand and every model reaches for first.'
+mechanism_tags: []
+transfer: Paper white, ink, one red, Helvetica only.
+do_not_copy:
+- everything here is an anti pattern
+why_it_fails: 'Beige ground, a serif and burgundy accents: the look every ''tasteful''
+  brand and every model reaches for first.'
+anti_category: too_luxury
+surfaces:
+- all
+approval: current
+decided_by: JJ (BRAND.md v3 forbidden list)

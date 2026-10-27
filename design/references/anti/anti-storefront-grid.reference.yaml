@@ -1,0 +1,22 @@
+id: anti-storefront-grid
+kind: site
+library: anti
+source_domain: creator storefront category convention
+distance: near
+rights:
+  status: inspiration_only
+  notes: composite of a convention, no source stored
+transferable_mechanism: '(what to avoid) An endless grid of products with ''Shop now''
+  and follower counts: the catalogue the brand exists to replace.'
+mechanism_tags: []
+transfer: No storefront, vitrine or infinite grid; six at most; no follower counts;
+  no 'Shop now'.
+do_not_copy:
+- everything here is an anti pattern
+why_it_fails: 'An endless grid of products with ''Shop now'' and follower counts:
+  the catalogue the brand exists to replace.'
+anti_category: too_generic_dtc
+surfaces:
+- all
+approval: current
+decided_by: JJ (BRAND.md v3 forbidden list)

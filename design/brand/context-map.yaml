@@ -1,0 +1,136 @@
+# Which brand sections and files each task needs. cstack brand context --task page
+tasks:
+  brief:
+    sections:
+    - strategy
+    - positioning
+    - customer_audience
+    - jobs_to_be_done
+    - claims
+    - proof
+    - voice
+    files:
+    - briefs/
+  copy:
+    sections:
+    - voice
+    - vocabulary
+    - banned_language
+    - naming
+    - claims
+    - proof
+    - positioning
+    - compliance_constraints
+    files:
+    - brand/rules/brand-rules.yaml
+    - assets/official/COPY-SYSTEM.md
+    - assets/official/WRITING.md
+  identity:
+    sections:
+    - logo_marks
+    - color
+    - typography
+    - type_hierarchy
+    - grid
+    - spacing
+    - layout
+    - motion
+    - components
+    - graphic_devices
+    - iconography
+    files:
+    - assets/official/
+    - brand/tokens/
+    - brand/rules/brand-rules.yaml
+    - CONSTITUTION.md
+  photography:
+    sections:
+    - photography
+    - camera_language
+    - lighting
+    - casting
+    - wardrobe
+    - locations
+    - props
+    - product_representation
+    - banned_language
+    files:
+    - brand/brand-world.json
+    - references/gold/
+    - references/anti/
+  packaging:
+    sections:
+    - packaging_rules
+    - product_representation
+    - claims
+    - proof
+    - compliance_constraints
+    - color
+    - typography
+    - logo_marks
+    files:
+    - assets/official/
+    - assets/product/
+    - brand/tokens/
+  page:
+    sections:
+    - voice
+    - claims
+    - proof
+    - value_proposition
+    - color
+    - typography
+    - type_hierarchy
+    - grid
+    - spacing
+    - layout
+    - components
+    - interaction
+    - motion
+    files:
+    - brand/tokens/
+    - brand/rules/brand-rules.yaml
+    - CONSTITUTION.md
+    - assets/official/BRAND.md
+    - assets/official/COPY-SYSTEM.md
+    - references/gold/
+    - references/anti/
+  review:
+    sections:
+    - positioning
+    - voice
+    - claims
+    - proof
+    - anti_references
+    - compliance_constraints
+    files:
+    - references/gold/
+    - references/anti/
+    - brand/rules/brand-rules.yaml
+    - CONSTITUTION.md
+    - assets/official/BRAND.md
+    - assets/official/WRITING.md
+  creative:
+    sections:
+    - business_truth
+    - customer_audience
+    - category
+    - positioning
+    - jobs_to_be_done
+    - brand_tensions
+    - value_proposition
+    - claims
+    - proof
+    - voice
+    - banned_language
+    - photography
+    - product_representation
+    - social_behavior
+    - cultural_territories
+    - anti_references
+    - campaign_history
+    - performance_evidence
+    - compliance_constraints
+    files:
+    - brand/rules/brand-rules.yaml
+    - references/anti/

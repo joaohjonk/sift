@@ -1,0 +1,25 @@
+id: ref-wordle-grid
+kind: site
+library: gold
+source_domain: 'word games: the share grid'
+distance: middle
+rights:
+  status: inspiration_only
+  notes: described, nothing stored
+credit: Wordle (2021)
+captured_at: '2026-10-27'
+retrieved_via: manual
+transferable_mechanism: A grid of coloured squares shows the shape of a result without
+  spoiling it; it is the growth loop.
+mechanism_tags: []
+transfer: 'The end of Sift this post and Monte o look: a grid of red and ghost squares
+  with ''Sift · 6 de 14'', share first.'
+do_not_copy:
+- its look, colours or type
+why_it_works: A grid of coloured squares shows the shape of a result without spoiling
+  it; it is the growth loop.
+surfaces:
+- Sift Page
+- Sift Record
+approval: current
+decided_by: JJ (brand/16_flows research, 2 Oct 2026)

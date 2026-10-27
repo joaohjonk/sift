@@ -1,0 +1,24 @@
+id: ref-letterboxd-four
+kind: site
+library: gold
+source_domain: 'film diaries: four favourites'
+distance: near
+rights:
+  status: inspiration_only
+  notes: described, nothing stored
+credit: Letterboxd profile
+captured_at: '2026-10-27'
+retrieved_via: manual
+transferable_mechanism: Four slots compress a person's taste into one quotable line;
+  the constraint creates identity.
+mechanism_tags: []
+transfer: 'The top of the Sift Page: her four, then shelves of at most six.'
+do_not_copy:
+- its look, colours or type
+why_it_works: Four slots compress a person's taste into one quotable line; the constraint
+  creates identity.
+surfaces:
+- Sift Page
+- Sift Record
+approval: current
+decided_by: JJ (brand/16_flows research, 2 Oct 2026)

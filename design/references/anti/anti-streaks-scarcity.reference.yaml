@@ -1,0 +1,20 @@
+id: anti-streaks-scarcity
+kind: site
+library: anti
+source_domain: growth-hacked consumer apps
+distance: near
+rights:
+  status: inspiration_only
+  notes: composite of a convention, no source stored
+transferable_mechanism: '(what to avoid) Streaks, fake scarcity, countdown pressure:
+  engagement taken, not earned.'
+mechanism_tags: []
+transfer: Only positive loops; dense launch with real invites; nothing manufactured.
+do_not_copy:
+- everything here is an anti pattern
+why_it_fails: 'Streaks, fake scarcity, countdown pressure: engagement taken, not earned.'
+anti_category: other
+surfaces:
+- all
+approval: current
+decided_by: JJ (BRAND.md v3 forbidden list)

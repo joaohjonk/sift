@@ -1,0 +1,23 @@
+id: ref-dominos-tracker
+kind: site
+library: gold
+source_domain: order tracking
+distance: far
+rights:
+  status: inspiration_only
+  notes: described, nothing stored
+credit: Domino's Pizza Tracker
+captured_at: '2026-10-27'
+retrieved_via: manual
+transferable_mechanism: True states only, each with a time; waiting becomes legible.
+mechanism_tags: []
+transfer: 'The Record spine: Draft, Signed, Live, Verified, Invoiced, Paid, with red
+  only for Late, Rights ending, Conflict.'
+do_not_copy:
+- its look, colours or type
+why_it_works: True states only, each with a time; waiting becomes legible.
+surfaces:
+- Sift Page
+- Sift Record
+approval: current
+decided_by: JJ (brand/16_flows research, 2 Oct 2026)

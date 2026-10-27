@@ -1,0 +1,25 @@
+id: ref-stripe-receipt
+kind: site
+library: gold
+source_domain: fintech receipts
+distance: near
+rights:
+  status: inspiration_only
+  notes: described, nothing stored
+credit: Stripe receipts
+captured_at: '2026-10-27'
+retrieved_via: manual
+transferable_mechanism: Every line is a dated fact in a fixed order; nothing persuades.
+  Trust comes from completeness and calm.
+mechanism_tags: []
+transfer: 'The Record receipt (Registro 09): contract, post, check, nota fiscal, Pix,
+  each a record line with its date and state.'
+do_not_copy:
+- its look, colours or type
+why_it_works: Every line is a dated fact in a fixed order; nothing persuades. Trust
+  comes from completeness and calm.
+surfaces:
+- Sift Page
+- Sift Record
+approval: current
+decided_by: JJ (brand/16_flows research, 2 Oct 2026)

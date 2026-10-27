@@ -1,0 +1,22 @@
+id: anti-fintech-gradient-cards
+kind: site
+library: anti
+source_domain: fintech dashboards
+distance: near
+rights:
+  status: inspiration_only
+  notes: composite of a convention, no source stored
+transferable_mechanism: (what to avoid) Rounded cards with gradients, shadows and
+  big coloured balances; money as spectacle.
+mechanism_tags: []
+transfer: 'The Record is a document: hairlines, record type, no radius, no shadow,
+  red only where she must act.'
+do_not_copy:
+- everything here is an anti pattern
+why_it_fails: Rounded cards with gradients, shadows and big coloured balances; money
+  as spectacle.
+anti_category: too_tech
+surfaces:
+- all
+approval: current
+decided_by: JJ (BRAND.md v3 forbidden list)

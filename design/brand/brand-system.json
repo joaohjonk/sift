@@ -1,0 +1,1405 @@
+{
+  "schema_version": "0.1",
+  "metadata": {
+    "brand_id": "sift",
+    "name": "Sift",
+    "updated": "2026-10-27",
+    "owner": "JJ",
+    "status": "imported",
+    "stage": "prelaunch",
+    "languages": [
+      "en",
+      "pt-BR"
+    ],
+    "markets": [
+      "BR"
+    ],
+    "version": "v3-import-1"
+  },
+  "provenance": {
+    "ingested": [
+      {
+        "ref": "assets/official/BRAND.md",
+        "kind": "official_asset",
+        "hash": "207e820bdb8b1d0f8653f2925e84695f1b1fc943103263f3d8fce98797a61e8d",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/COPY-SYSTEM.md",
+        "kind": "official_asset",
+        "hash": "645090e53fd81e7d5ba59100649e0accf64b3922a9c996a23b6f7b31d6559f66",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/DESIGN-site.md",
+        "kind": "official_asset",
+        "hash": "832dd0d8e8da85c370762c3199b40ccd5f3293baa191c2211758a6cbd5bb2c36",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/FIGMA.md",
+        "kind": "official_asset",
+        "hash": "b14a4b230f250cbfec127db47551f6da4d9fc662d06e821f74691af441a84929",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/README.md",
+        "kind": "official_asset",
+        "hash": "b756db681186c7ef468a3fba551cfdcebb2080594299c839b6726c1e8892d184",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/WRITING.md",
+        "kind": "official_asset",
+        "hash": "b4eb4b7aded3f819931d4a63f05ad25b120b209db9d0d2ffcc6e6514a52522ce",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/fonts/texgyreheros-bold.otf",
+        "kind": "official_asset",
+        "hash": "b170162835f4efc288886dd4231406dc47e19b614cf4416836635599d44a7d60",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/fonts/texgyreheros-italic.otf",
+        "kind": "official_asset",
+        "hash": "6473df7fa107b3fb4be38973710afe22b0640c2ac076d5337cf126bed9aa108c",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/fonts/texgyreheros-regular.otf",
+        "kind": "official_asset",
+        "hash": "6ae1a09d5a940367b7aaaa91ee8bd8a2c333bfe193e7096e23f931357d62081f",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/motion/mark-motion.js",
+        "kind": "official_asset",
+        "hash": "06d092067757205ceefb7a9d19a1ac218dd208c004b32cb5aaf3fb63ee75aa1e",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "assets/official/site-tokens.css",
+        "kind": "official_asset",
+        "hash": "0f9eb602bda1757eefcb89983ea388365d4e3120baedc7215f42aa7724d7099e",
+        "date": "2026-10-27"
+      },
+      {
+        "ref": "https://www.figma.com/design/8igZ9lqi2khpkKRgAmwfV5",
+        "kind": "figma",
+        "date": "2026-10-27",
+        "notes": "Sift · Brand System v1: identity, type, colour, components, applications, prototypes 19 (Registro) and 22 (Sift Page) read by screenshot"
+      }
+    ],
+    "precedence": [
+      "user_instruction",
+      "approved_brand_state",
+      "official_asset",
+      "live_brand_behavior",
+      "campaign_exception",
+      "extracted_pattern",
+      "external_reference",
+      "model_inference"
+    ],
+    "gaps": [
+      {
+        "looked_for": "licensed Helvetica for the app",
+        "where": "assets/official/fonts has only TeX Gyre Heros",
+        "status": "needs_owner"
+      },
+      {
+        "looked_for": "creative direction pick (Verso, Livro, Garimpo)",
+        "where": "JJ",
+        "status": "needs_owner"
+      }
+    ]
+  },
+  "sections": {
+    "business_truth": {
+      "faces": {
+        "value": "Two faces, one engine. Sift Page in front: the machine finds every piece in a creator's posts, she keeps a few, the page is built in minutes. Sift Record behind: contract, post check, invoice and payment for her, her agency and the brand.",
+        "input_class": "FACT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#00",
+            "quote": "Two faces, one engine. The page, in front ... The record, behind: the back office that understands, verifies and receives every deal.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "attribution": {
+        "value": "Through the page, never the post. Links live on the Sift Page; sales are attributed on first and last click. No affiliate links or shop tags in the feed.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#00",
+            "quote": "Attribution. Through the page, never the post.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "money_needs_a_person": {
+        "value": "Anything that moves money needs a person's approval.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#09",
+            "quote": "anything that moves money needs a person's approval.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "customer_audience": {},
+    "category": {
+      "claim": {
+        "value": "Sift keeps the record of judgment: what a person chose, what she left out, and every deal behind the choice.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#00",
+            "quote": "Category claim. Sift keeps the record of judgment: what a person chose, what she left out, and every deal behind the choice.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "strategy": {},
+    "positioning": {
+      "judging_sentence": {
+        "value": "Sift is where a choice gets an author, a history and a consequence. (PT: A Sift é onde a escolha passa a ter autor, histórico e consequência.)",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/COPY-SYSTEM.md",
+            "quote": "The sentence that judges every next decision. Sift is where a choice gets an author, a history and a consequence.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      },
+      "lines": {
+        "value": [
+          "Taste, on record.",
+          "Proof of taste.",
+          "Fewer, better things."
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#00",
+            "quote": "Lines, in JJ's order: Taste, on record. · Proof of taste. · Fewer, better things.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      },
+      "not_competing_in": {
+        "value": "ShopMy says 'Your Storefront. Your standard.' Sift does not compete in that vocabulary. Sift owns choice and consequence.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/COPY-SYSTEM.md",
+            "quote": "ShopMy says \"Your Storefront. Your standard.\" and Benable says \"real people, real recs\". Sift does not compete in that vocabulary.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "jobs_to_be_done": {},
+    "brand_beliefs": {
+      "aphorism": {
+        "value": "Taste without the record becomes content. The record without taste becomes software. Together, they become infrastructure.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#00",
+            "quote": "Taste without the record becomes content. The record without taste becomes software. Together, they become infrastructure.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "laws": {
+        "value": [
+          "Show the few, count the many. Every edit states its ratio.",
+          "Nothing is deleted. What was left out stays on record.",
+          "Red points at the one: the kept thing, the live state, the thing that needs you. Never decoration.",
+          "No text on pictures, except the machine's own marks.",
+          "Six at most. No view holds more than six chosen things.",
+          "One typeface. Helvetica, everywhere.",
+          "The record uses the same page as the edit. Denser, never a different world.",
+          "Placeless. Never name the city Sift is built in."
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#00",
+            "quote": "Laws 1. Show the few, count the many ... 8. Placeless. Never name the city Sift is built in, on any surface.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      },
+      "public_promises": {
+        "value": [
+          "No taste score, ever.",
+          "Disagreement is data.",
+          "Every commercial tie is visible: organic, gifted, affiliate, paid.",
+          "Your judgment is yours.",
+          "Nothing is deleted quietly.",
+          "Never discount codes, never dupes, commission never changes ranking."
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#07",
+            "quote": "Public promises. No taste score, ever. Disagreement is data. Every commercial tie is visible ...",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "brand_tensions": {},
+    "value_proposition": {},
+    "claims": {},
+    "proof": {},
+    "voice": {
+      "english": {
+        "value": "A 032c article crossed with a Vignelli manual, legible with zero context. Short declaratives, numbers over adjectives, no hype words, no exclamation marks, no dashes.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#07",
+            "quote": "A 032c article crossed with a Vignelli manual, legible to someone with zero context. Clear first, then editorial.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "portuguese": {
+        "value": "Written natively, never translated line by line. Register of a great Brazilian magazine, creator talk used lightly (publi, recebido, job). 'Você' in the interface.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#07",
+            "quote": "Portuguese. Written natively, never translated line by line ... Register of a great Brazilian magazine",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          },
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/WRITING.md",
+            "quote": "\"Você\" na interface, \"a gente\" quando a Sift fala de si num tom de conversa.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "tests": {
+        "value": [
+          "See it",
+          "Falsify it",
+          "Only us",
+          "Zero context",
+          "Read aloud",
+          "Count the cost (every word in UI is a tap of friction)"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/WRITING.md",
+            "quote": "Every line passes all six, or it goes back.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "sift_is_a_verb": {
+        "value": "Use Sift as a verb in action moments (toys, buttons, shares): Sift again, Dê um sift. Never 'peneirar'.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/COPY-SYSTEM.md",
+            "quote": "Sift is a verb (JJ, 1 Oct). To sift is to choose well and leave the rest out.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "vocabulary": {
+      "english": {
+        "value": [
+          "keep",
+          "kept",
+          "left out",
+          "choose",
+          "edit",
+          "source",
+          "page",
+          "record",
+          "proof",
+          "trace",
+          "on record"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/COPY-SYSTEM.md",
+            "quote": "English owns: keep, kept, left out, choose, edit, source, page, record, proof, trace, on record.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "portuguese": {
+        "value": [
+          "fica",
+          "ficou",
+          "sai",
+          "de fora",
+          "escolha",
+          "fonte",
+          "página",
+          "registro",
+          "prova",
+          "nome e sobrenome"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/COPY-SYSTEM.md",
+            "quote": "Português owns: fica, ficou, sai, de fora, escolha, fonte, página, registro, prova, nome e sobrenome.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "product_names": {
+        "value": [
+          "Sift Page",
+          "Sift Record",
+          "Monte o look"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/WRITING.md",
+            "quote": "One name per thing: Sift Page, Sift Record, Monte o look.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      },
+      "deal_states": {
+        "value": {
+          "states": [
+            "Draft",
+            "Signed",
+            "Live",
+            "Verified",
+            "Invoiced",
+            "Paid"
+          ],
+          "red_side_states": [
+            "Late",
+            "Rights ending",
+            "Conflict"
+          ]
+        },
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#09",
+            "quote": "States: Draft, Signed, Live, Verified, Invoiced, Paid. Side states Late, Rights ending and Conflict take red",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "banned_language": {
+      "words": {
+        "value": [
+          "curated",
+          "authentic",
+          "community",
+          "empower",
+          "unlock",
+          "discover",
+          "seamless",
+          "ecosystem",
+          "monetize",
+          "creator economy",
+          "AI-powered",
+          "shopping destination",
+          "delve",
+          "elevate",
+          "journey",
+          "game changer",
+          "Shop now",
+          "curadoria",
+          "autêntico",
+          "jornada",
+          "ecossistema",
+          "potencializar",
+          "descoberta",
+          "experiência personalizada",
+          "monetizar",
+          "peneirar",
+          "vitrine",
+          "storefront",
+          "rolodex"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/COPY-SYSTEM.md",
+            "quote": "Avoid: curated, authentic, community, empower, unlock, discover, seamless, ecosystem ... Never call the Sift Page a storefront, vitrine or rolodex.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          },
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/WRITING.md",
+            "quote": "Also banned: delve, unlock, elevate, seamless, curated as praise, journey, game changer, empower",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      },
+      "constructions": {
+        "value": [
+          "Not X but Y",
+          "colon as punch line",
+          "reflex triplets",
+          "dashes",
+          "exclamation marks",
+          "emoji",
+          "'In a world...' openers",
+          "naming the city"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/WRITING.md",
+            "quote": "Not X but Y ... Colon as punch line ... Reflex triplet ... Dash as drama",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          },
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#07",
+            "quote": "\"Not X but Y\" constructions. The city.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "naming": {},
+    "logo_marks": {
+      "primary": {
+        "value": "The Sift square: a perfect square in Sift red #E8251A with SIFT whole in Helvetica Bold, white, edge to edge, flush to the lower margin (4% of the side). Alone (no name) under 24 px. Clear space a quarter of the side. Minimum 16 px alone, 32 px with the name.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#01",
+            "quote": "The Sift square. A perfect square in Sift red #E8251A with SIFT whole in Helvetica Bold, white, set edge to edge, flush to the lower margin (4% of the side).",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          },
+          {
+            "kind": "live_brand_behavior",
+            "ref": "assets/official/site-tokens.css",
+            "quote": ".mark{display:block;width:40px;height:40px;background:var(--red)",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "conflict",
+        "notes": "Open conflict CF-2026-10-27-logo with the Figma Identity page (plain SIFT wordmark, no square). Default until JJ resolves: the red square, as on sift.cc."
+      },
+      "never": {
+        "value": [
+          "rotated",
+          "rounded",
+          "outlined",
+          "gradient",
+          "retyped",
+          "a second colour",
+          "lowercase",
+          "the name outside the square as a logo"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#01",
+            "quote": "Never. Rotated, rounded, outlined, gradient, retyped, a second colour, lowercase, the name outside the square as a logo.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "color": {
+      "paper": {
+        "value": "#FFFFFF",
+        "input_class": "FACT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#06",
+            "quote": "Paper #FFFFFF",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked",
+        "notes": "token: color.paper"
+      },
+      "ink": {
+        "value": "#0D0D0C",
+        "input_class": "FACT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#06",
+            "quote": "Ink #0D0D0C",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked",
+        "notes": "token: color.ink"
+      },
+      "red": {
+        "value": "#E8251A",
+        "input_class": "FACT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#06",
+            "quote": "Sift red #E8251A ... Red is the one",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked",
+        "notes": "token: color.red. The kept thing, the live state, the thing that needs you. Never decoration, never a fill beyond the mark, the kept and the one inverted piece."
+      },
+      "wash": {
+        "value": "#F4F4F1",
+        "input_class": "FACT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#06",
+            "quote": "Wash #F4F4F1 ... the wash is where products and the backstage live",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked",
+        "notes": "token: color.wash"
+      },
+      "ghost": {
+        "value": "rgba(13,13,12,.14)",
+        "input_class": "FACT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#06",
+            "quote": "Ghost, ink at 14%",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked",
+        "notes": "token: color.ghost. The many, left out, dashed outlines."
+      },
+      "quiet": {
+        "value": "rgba(13,13,12,.56)",
+        "input_class": "FACT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#06",
+            "quote": "Quiet, ink at 56%",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked",
+        "notes": "token: color.quiet. Secondary text."
+      },
+      "dark_mode": {
+        "value": "Figma defines a dark mode (paper #0D0D0C, ink #F4F4F1, red #FF4331, wash #171716). BRAND.md v3 has no dark mode; the site ships light only.",
+        "input_class": "SOFT_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "extracted_pattern",
+            "ref": "assets/official/FIGMA.md",
+            "quote": "Color (Light, Dark): color/paper 3:3, ink 3:4, ghost 3:5, quiet 3:6, red 3:7, wash 3:8.",
+            "captured_at": "2026-09-28",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "provisional",
+        "notes": "Use only for the iPhone app's system dark mode, never on sift.cc, until JJ confirms."
+      }
+    },
+    "materials": {},
+    "textures": {},
+    "typography": {
+      "family": {
+        "value": "Helvetica (Helvetica Neue on Apple). The web ships TeX Gyre Heros as its free twin. One family everywhere.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "One family: Helvetica (Helvetica Neue on Apple devices). The web ships TeX Gyre Heros as its twin",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          },
+          {
+            "kind": "live_brand_behavior",
+            "ref": "assets/official/site-tokens.css",
+            "quote": "--h:\"Helvetica Neue\",Helvetica,\"Heros\",Arial,sans-serif;",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "conflict",
+        "notes": "Open conflict CF-2026-10-27-type with the Figma file (Switzer, Newsreader italic, Martian Mono). Default until JJ resolves: Helvetica only, as BRAND.md v3 and sift.cc."
+      },
+      "weights": {
+        "value": "Regular 400 and Italic 400 everywhere. Bold 700 only inside the red square.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "The mark | Bold 700, only inside the square",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          },
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "no bold outside the mark.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      },
+      "person": {
+        "value": "The person and their choice are set in Italic 400.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "The person and their choice | Italic 400",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "type_hierarchy": {
+      "web_scale": {
+        "value": {
+          "D1": "clamp(52px,12.4vw,184px) · 400 · -4.5% · 0.92",
+          "D2": "clamp(30px,5.4vw,76px) · 400 · -4% · 0.98",
+          "D3": "clamp(24px,2.6vw,38px) · -3% · 1.02",
+          "lead": "clamp(18px,1.55vw,23px) · 1.34",
+          "body": "16px · 1.45",
+          "record": "clamp(10px,.8vw,11.5px) · caps · +6% · tabular"
+        },
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "live_brand_behavior",
+            "ref": "assets/official/site-tokens.css",
+            "quote": "--D1:clamp(52px,12.4vw,184px); --D2:clamp(30px,5.4vw,76px); --D3:clamp(24px,2.6vw,38px); --L:clamp(18px,1.55vw,23px); --T:16px; --M:clamp(10px,.8vw,11.5px);",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          },
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "Web scale: D1 52 to 184 px · D2 30 to 84 · D3 24 to 38 · lead 18 to 34 · body 16 · record 10 to 11.5.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "case_and_alignment": {
+        "value": "Sentence case except record lines and the mark. Flush left, ragged right.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "Sentence case except record and mark; flush left, ragged right",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "grid": {
+      "web": {
+        "value": "Margin m = max(16px, 100vw/36). 12 columns, gutter m/2. Labels in columns 1 to 4; headlines and text hang from column 5. First fold is the full viewport, capped at 980 px.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#05",
+            "quote": "Margin m = max(16, width ÷ 36). 12 columns, gutter m ÷ 2. Labels in columns 1 to 4; headlines and text hang from column 5.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "spacing": {
+      "unit": {
+        "value": "8px vertical unit; sections 110 to 180 px apart on desktop.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#05",
+            "quote": "Vertical unit 8 px; sections 110 to 180 px apart on desktop.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "layout": {},
+    "components": {
+      "button": {
+        "value": "Ink fill, white record type, 52 px tall, no radius. Hover turns red.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/DESIGN-site.md",
+            "quote": "button: \"ink fill, white record type, 52px tall, no radius\"",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "text_button": {
+        "value": "Record type with a 1 px underline (SIFT AGAIN).",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/DESIGN-site.md",
+            "quote": "textbutton: \"record type with a 1px underline\"",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "kept_box": {
+        "value": "1.5 px red outline with an 8 px red tag top left; seen and left out boxes are white and dashed.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/DESIGN-site.md",
+            "quote": "kept_box: \"1.5px red outline with an 8px red tag on the top left; seen and left out boxes are white and dashed\"",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "tile": {
+        "value": "Wash square; kept = red outline; empty = dashed ghost outline.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/DESIGN-site.md",
+            "quote": "tile: \"wash square; kept = red outline; empty = dashed ghost outline\"",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "record_line": {
+        "value": "SIFT 00291 · KEPT BY Ana L. · 12.03.26 · OBJECT Overshirt, linen · SOURCE Reel · STATUS On record",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#09",
+            "quote": "SIFT 00291 · KEPT BY Ana L. · 12.03.26 · OBJECT Overshirt, linen · SOURCE Reel · STATUS On record",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "never": {
+        "value": [
+          "rounded corners",
+          "UI drop shadows",
+          "cards with shadows",
+          "icons as decoration",
+          "gradients",
+          "glass",
+          "glow"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#forbidden",
+            "quote": "Gradients, glass, glow, sparkles, rounded corners, UI drop shadows. Icons as decoration.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "interaction": {
+      "the_game": {
+        "value": "Participation through games demonstrates the thesis: you cannot reveal taste without constraints. Monte o look: pick from many, keep at most six, the rest leave. The end screen is a shareable card.",
+        "input_class": "SOFT_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/COPY-SYSTEM.md",
+            "quote": "Participation. The games demonstrate the thesis: you cannot reveal taste without constraints. Choosing means leaving things out.",
+            "captured_at": "2026-10-01",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "honesty": {
+        "value": "Every guess shows its evidence; exact and similar matches stay separate; no dark patterns (streaks, fake scarcity, '$0 today').",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "approved_brand_state",
+            "ref": "assets/official/README.md",
+            "quote": "Flows brief, 2 Oct 2026: Honesty rules: every guess shows its evidence; exact vs similar matches stay separate; no dark patterns",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "motion": {
+      "tempo": {
+        "value": "Slow and settled. Easing cubic-bezier(.2,.7,.1,1). Fades 700 ms, settles 900 to 1000 ms, pictures arrive in 1.3 s. Reduced motion shows the finished state.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#02",
+            "quote": "Tempo. Everything moves slowly and settles ... fades 700 ms, settles 900 to 1000 ms, pictures arrive in 1.3 s",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "primitives": {
+        "value": {
+          "sift": "the many fade to ghost, the kept stay red",
+          "recognise": "the machine draws boxes one by one with a label and a confidence; kept turn red, left out turn dashed",
+          "arrive": "from the wash, never pop",
+          "morph": "labels change in place (Request access → Sending → On record)",
+          "shelf": "objects jump from the bottom edge, a few land on a hairline with a 400 ms squash, the rest fall back"
+        },
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#02",
+            "quote": "Primitives. Sift ... Recognise ... Arrive ... Morph ... The shelf",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "mark_motion": {
+        "value": "The sieve, 5.1 s, a 25 × 25 perforated red plate; SIFT lights in dots and closes into the mark. No scan line.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#02",
+            "quote": "Mark motion v3, the sieve. 5.1 s ... No scan line.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "sound": {
+      "track": {
+        "value": "JJ's own track, muted by default, 'Sound on' bottom right; voice once per session, then a loop.",
+        "input_class": "SOFT_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#03",
+            "quote": "Behaviour. Muted by default, \"Sound on\" in the bottom right corner.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "photography": {
+      "classes": {
+        "value": [
+          "The kept object (real branded products, machine box, record caption)",
+          "The post (lifestyle frames where the machine visibly works)",
+          "The world (the chooser, the room of one mind, the record, the audience)",
+          "Our products (4:5 studio standard on #F4F4F1)"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#08",
+            "quote": "Four classes. 1. The kept object ... 2. The post ... 3. The world ... 4. Our products.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      },
+      "rights": {
+        "value": "Third party pictures are references only while not commercial; credit the maker; license or reshoot before commercial use.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#08",
+            "quote": "Rights. Third party pictures are references for the manifesto site while it is not commercial",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "camera_language": {},
+    "lighting": {},
+    "casting": {},
+    "wardrobe": {},
+    "locations": {},
+    "props": {},
+    "product_representation": {
+      "studio_standard": {
+        "value": "4:5, seamless matte paper #F4F4F1, soft daylight upper left, one contact shadow, product identical to the original, no props, hands, text or added logos.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#08",
+            "quote": "Our products. The 4:5 studio standard on #F4F4F1",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "current"
+      }
+    },
+    "packaging_rules": {},
+    "illustration": {},
+    "graphic_devices": {},
+    "iconography": {},
+    "social_behavior": {},
+    "cultural_territories": {},
+    "reference_mechanisms": {},
+    "anti_references": {
+      "forbidden": {
+        "value": [
+          "beige plus serif plus burgundy",
+          "serifs",
+          "expanded grotesks",
+          "gradients, glass, glow, sparkles",
+          "rounded corners",
+          "UI drop shadows",
+          "icons as decoration",
+          "a taste score",
+          "follower counts on the frontstage",
+          "Shop now",
+          "more than six chosen things in one view",
+          "a scan line",
+          "naming the city",
+          "Celeste's faces or palette"
+        ],
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#forbidden",
+            "quote": "Beige plus serif plus burgundy. Serifs. Expanded grotesks. Gradients, glass, glow, sparkles, rounded corners, UI drop shadows.",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "asset_registry": {},
+    "campaign_history": {},
+    "performance_evidence": {},
+    "compliance_constraints": {
+      "disclosure": {
+        "value": "Every commercial tie is visible (organic, gifted, affiliate, paid); post checks include the #publi disclosure.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#09",
+            "quote": "Check (product, mention, length, #publi disclosure)",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      },
+      "unsigned_people": {
+        "value": "Never name a creator who has not signed with Sift on any demo or public surface; use @criadora.",
+        "input_class": "HARD_CONSTRAINT",
+        "sources": [
+          {
+            "kind": "user_instruction",
+            "ref": "assets/official/README.md",
+            "quote": "JJ, 21 Oct 2026: do not name the MVP creator until she signs.",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "high",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "locked"
+      }
+    },
+    "approved_exceptions": {},
+    "known_uncertainties": {
+      "creative_direction": {
+        "value": "Creative direction v2 (27 Oct 2026) proposes three worlds: Verso, Livro, Garimpo. JJ has not picked one. The system above draws any of the three.",
+        "input_class": "OPEN_CREATIVE_SPACE",
+        "sources": [
+          {
+            "kind": "approved_brand_state",
+            "ref": "assets/official/README.md",
+            "quote": "creative direction v2 draft (27 Oct, not yet chosen by JJ)",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        ],
+        "confidence": "medium",
+        "last_updated": "2026-10-27",
+        "permanence": "core",
+        "approval": "unknown"
+      }
+    }
+  },
+  "conflicts": [
+    {
+      "id": "CF-2026-10-27-type",
+      "field": "typography.family",
+      "positions": [
+        {
+          "value": "Helvetica only (TeX Gyre Heros on the web)",
+          "source": {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "One family: Helvetica (Helvetica Neue on Apple devices).",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        },
+        {
+          "value": "Switzer 300/400, Newsreader Light Italic for names, Martian Mono for record lines",
+          "source": {
+            "kind": "official_asset",
+            "ref": "assets/official/FIGMA.md",
+            "quote": "Text styles target Switzer; until Switzer syncs to Figma ... they use Inter Light and Regular as a stand-in.",
+            "captured_at": "2026-09-28",
+            "by": "brand-import"
+          }
+        }
+      ],
+      "default_until_resolved": "Helvetica only",
+      "status": "open",
+      "owner": "JJ",
+      "notes": "BRAND.md v3 (29 Sep) is newer than the Figma build (28 Sep) and says Figma is a view of it. Its forbidden list bans serifs, which rules out Newsreader."
+    },
+    {
+      "id": "CF-2026-10-27-logo",
+      "field": "logo_marks.primary",
+      "positions": [
+        {
+          "value": "Red square with SIFT in Helvetica Bold",
+          "source": {
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#01",
+            "quote": "The Sift square. A perfect square in Sift red #E8251A with SIFT whole in Helvetica Bold",
+            "captured_at": "2026-09-29",
+            "by": "brand-import"
+          }
+        },
+        {
+          "value": "Plain SIFT wordmark, caps, +16% tracking, no symbol",
+          "source": {
+            "kind": "extracted_pattern",
+            "ref": "https://www.figma.com/design/8igZ9lqi2khpkKRgAmwfV5 (page 01 Identity)",
+            "quote": "SIFT wordmark, no symbol, top left at text size",
+            "captured_at": "2026-10-27",
+            "by": "brand-import"
+          }
+        }
+      ],
+      "default_until_resolved": "Red square",
+      "status": "open",
+      "owner": "JJ",
+      "notes": "sift.cc ships the red square today."
+    }
+  ],
+  "entities_ref": "brand/brand-world.json",
+  "references_ref": "references/"
+}

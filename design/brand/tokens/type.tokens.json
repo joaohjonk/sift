@@ -1,0 +1,129 @@
+{
+  "$description": "Sift type tokens. Helvetica only (BRAND.md §04); TeX Gyre Heros ships as the free web twin. Open conflict CF-2026-10-27-type with the Figma file.",
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "sans": {
+        "$value": [
+          "Helvetica Neue",
+          "Helvetica",
+          "Heros",
+          "Arial",
+          "sans-serif"
+        ]
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": {
+        "$value": 400
+      },
+      "mark": {
+        "$value": 700,
+        "$description": "only inside the red square"
+      }
+    },
+    "tracking": {
+      "$type": "number",
+      "display": {
+        "$value": -0.045
+      },
+      "section": {
+        "$value": -0.04
+      },
+      "d3": {
+        "$value": -0.03
+      },
+      "record": {
+        "$value": 0.06
+      }
+    },
+    "leading": {
+      "$type": "number",
+      "display": {
+        "$value": 0.92
+      },
+      "section": {
+        "$value": 0.98
+      },
+      "lead": {
+        "$value": 1.34
+      },
+      "body": {
+        "$value": 1.45
+      },
+      "record": {
+        "$value": 1.55
+      }
+    },
+    "size": {
+      "$type": "dimension",
+      "body": {
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
+      },
+      "d1-min": {
+        "$value": {
+          "value": 52,
+          "unit": "px"
+        }
+      },
+      "d1-max": {
+        "$value": {
+          "value": 184,
+          "unit": "px"
+        }
+      },
+      "d2-min": {
+        "$value": {
+          "value": 30,
+          "unit": "px"
+        }
+      },
+      "d2-max": {
+        "$value": {
+          "value": 76,
+          "unit": "px"
+        }
+      },
+      "d3-min": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      },
+      "d3-max": {
+        "$value": {
+          "value": 38,
+          "unit": "px"
+        }
+      },
+      "lead-min": {
+        "$value": {
+          "value": 18,
+          "unit": "px"
+        }
+      },
+      "lead-max": {
+        "$value": {
+          "value": 23,
+          "unit": "px"
+        }
+      },
+      "record-min": {
+        "$value": {
+          "value": 10,
+          "unit": "px"
+        }
+      },
+      "record-max": {
+        "$value": {
+          "value": 11.5,
+          "unit": "px"
+        }
+      }
+    }
+  }
+}

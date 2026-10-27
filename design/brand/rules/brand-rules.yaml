@@ -1,0 +1,76 @@
+# Machine-testable brand rules for Sift. Source: assets/official/BRAND.md v3, COPY-SYSTEM.md, WRITING.md, CONSTITUTION.md.
+# deterministic -> enforced by code; judge -> an independent reviewer cites the rule id.
+version: 0.1
+rules:
+  - id: R-COLOR-01
+    scope: core
+    rule: every colour in UI code comes from brand/generated/tokens.css; no raw hex outside the token file
+    check: deterministic   # cstack tokens lint <css files>
+  - id: R-COLOR-02
+    scope: core
+    rule: Sift red marks one thing per view (the kept thing, the live state, the thing that needs you); never a decorative fill, gradient or second accent
+    check: judge
+  - id: R-TYPE-01
+    scope: core
+    rule: one family, Helvetica (TeX Gyre Heros on the web); weight 400 regular and italic; bold 700 only inside the red square
+    check: judge
+  - id: R-TYPE-02
+    scope: core
+    rule: record lines are caps, +6% tracking, tabular figures; everything else is sentence case, flush left, ragged right
+    check: judge
+  - id: R-SHAPE-01
+    scope: core
+    rule: no border radius and no UI drop shadow anywhere
+    check: deterministic   # grep -E "border-radius:\s*[1-9]|box-shadow" must return nothing outside tokens
+  - id: R-LAYOUT-01
+    scope: core
+    rule: no view holds more than six chosen things; every edit states its ratio (kept k of n)
+    check: judge
+  - id: R-LAYOUT-02
+    scope: core
+    rule: what was left out stays visible as a dashed ghost box, a hairline or a record line; nothing is deleted quietly
+    check: judge
+  - id: R-IMG-01
+    scope: core
+    rule: no text on pictures except the machine's own marks (boxes and their labels); captions sit under the frame and credit the maker
+    check: judge
+  - id: R-IMG-02
+    scope: core
+    rule: our product images are 4:5 on the wash #F4F4F1
+    check: deterministic   # cstack audit <file> --aspect 4:5
+  - id: R-A11Y-01
+    scope: core
+    rule: every tap target is at least 44 px; reduced motion shows the finished state
+    check: judge
+  - id: R-STATE-01
+    scope: core
+    rule: every screen designs loading (wash, no spinner), empty, error, success and partial states
+    check: judge
+  - id: R-HONEST-01
+    scope: core
+    rule: exact and similar matches never mix; every guess shows its evidence; every commercial tie (organic, gifted, affiliate, paid) is visible
+    check: judge
+  - id: R-HONEST-02
+    scope: core
+    rule: no dark patterns (streaks, fake scarcity, "R$ 0 hoje", follower counts on the frontstage, a taste score)
+    check: judge
+  - id: R-MONEY-01
+    scope: core
+    rule: anything that moves money needs a person's deliberate approval, with a short undo window
+    check: judge
+  - id: R-COPY-01
+    scope: core
+    rule: no dashes, exclamation marks or emoji in copy; no "not X but Y"; no banned words (banned_language.words)
+    check: judge
+  - id: R-COPY-02
+    scope: core
+    rule: the Sift Page is never called a storefront, vitrine or rolodex; Sift is used as a verb in action moments
+    check: judge
+  - id: R-PRIV-01
+    scope: core
+    rule: never name a creator who has not signed with Sift (use @criadora); never name the city Sift is built in
+    check: judge
+  - id: R-GROWTH-01
+    scope: core
+    rule: value arrives before signup, and every game ends in a shareable artefact with share as the primary action and copy link as fallback
+    check: judge

@@ -1,0 +1,22 @@
+id: anti-taste-score
+kind: site
+library: anti
+source_domain: quiz and match apps
+distance: middle
+rights:
+  status: inspiration_only
+  notes: composite of a convention, no source stored
+transferable_mechanism: (what to avoid) A percentage or score that ranks a person's
+  taste; reduces judgment to a number.
+mechanism_tags: []
+transfer: Grades in words and evidence under every guess; no taste score, ever (public
+  promise).
+do_not_copy:
+- everything here is an anti pattern
+why_it_fails: A percentage or score that ranks a person's taste; reduces judgment
+  to a number.
+anti_category: beautiful_but_not_this_brand
+surfaces:
+- all
+approval: current
+decided_by: JJ (BRAND.md v3 forbidden list)

@@ -1,0 +1,93 @@
+{
+  "$description": "Sift space, radius and motion tokens (BRAND.md §02, §05; DESIGN-site.md).",
+  "space": {
+    "$type": "dimension",
+    "unit": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      }
+    },
+    "margin-min": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
+    },
+    "button-height": {
+      "$value": {
+        "value": 52,
+        "unit": "px"
+      }
+    },
+    "hit": {
+      "$value": {
+        "value": 44,
+        "unit": "px"
+      },
+      "$description": "minimum tap target"
+    },
+    "kept-outline": {
+      "$value": {
+        "value": 1.5,
+        "unit": "px"
+      }
+    },
+    "kept-tag": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      }
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "none": {
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      },
+      "$description": "no radius anywhere"
+    }
+  },
+  "motion": {
+    "easing": {
+      "$type": "cubicBezier",
+      "sift": {
+        "$value": [
+          0.2,
+          0.7,
+          0.1,
+          1
+        ]
+      }
+    },
+    "duration": {
+      "$type": "duration",
+      "fade": {
+        "$value": {
+          "value": 700,
+          "unit": "ms"
+        }
+      },
+      "settle": {
+        "$value": {
+          "value": 900,
+          "unit": "ms"
+        }
+      },
+      "arrive": {
+        "$value": {
+          "value": 1300,
+          "unit": "ms"
+        }
+      },
+      "squash": {
+        "$value": {
+          "value": 400,
+          "unit": "ms"
+        }
+      }
+    }
+  }
+}

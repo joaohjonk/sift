@@ -1,0 +1,15 @@
+/* Sift · sift.cc · Issue 00, a manifesto · tokens from brand/system/BRAND.md · Helvetica only, TeX Gyre Heros as the free twin */
+@font-face{font-family:"Heros";src:url(fonts/texgyreheros-regular.otf) format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Heros";src:url(fonts/texgyreheros-bold.otf) format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Heros";src:url(fonts/texgyreheros-italic.otf) format("opentype");font-weight:400;font-style:italic;font-display:swap}
+:root{
+  --paper:#FFFFFF; --ink:#0D0D0C; --red:#E8251A; --wash:#F4F4F1;
+  --ghost:rgba(13,13,12,.14); --quiet:rgba(13,13,12,.56);
+  --h:"Helvetica Neue",Helvetica,"Heros",Arial,sans-serif;
+  --m:max(16px,calc(100vw / 36)); --g:calc(var(--m) / 2); --u:8px;
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --D1:clamp(52px,12.4vw,184px); --D2:clamp(30px,5.4vw,76px); --D3:clamp(24px,2.6vw,38px);
+  --L:clamp(18px,1.55vw,23px); --T:16px; --M:clamp(10px,.8vw,11.5px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}

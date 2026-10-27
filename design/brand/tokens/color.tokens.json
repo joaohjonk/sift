@@ -1,0 +1,89 @@
+{
+  "$description": "Sift colour tokens. Source: assets/official/BRAND.md §06 and site-tokens.css. Red is the one: the kept thing, the live state, the thing that needs you.",
+  "color": {
+    "$type": "color",
+    "paper": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hex": "#FFFFFF"
+      },
+      "$description": "Paper: the page"
+    },
+    "ink": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.051,
+          0.051,
+          0.047
+        ],
+        "hex": "#0D0D0C"
+      },
+      "$description": "Ink: text, rules, buttons"
+    },
+    "red": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.91,
+          0.145,
+          0.102
+        ],
+        "hex": "#E8251A"
+      },
+      "$description": "Sift red: the one. Never decoration"
+    },
+    "wash": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.957,
+          0.957,
+          0.945
+        ],
+        "hex": "#F4F4F1"
+      },
+      "$description": "Wash: where products and the backstage live"
+    },
+    "ghost": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.051,
+          0.051,
+          0.047
+        ],
+        "hex": "#0D0D0C24",
+        "alpha": 0.14
+      },
+      "$description": "Ghost: the many, left out, dashed outlines"
+    },
+    "quiet": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.051,
+          0.051,
+          0.047
+        ],
+        "hex": "#0D0D0C8F",
+        "alpha": 0.56
+      },
+      "$description": "Quiet: secondary text"
+    },
+    "surface": {
+      "$value": "{color.paper}"
+    },
+    "text": {
+      "$value": "{color.ink}"
+    },
+    "accent": {
+      "$value": "{color.red}"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+id: ref-google-lens-exact-similar
+kind: site
+library: gold
+source_domain: 'visual search: exact vs visual matches'
+distance: near
+rights:
+  status: inspiration_only
+  notes: described, nothing stored
+credit: Google Lens
+captured_at: '2026-10-27'
+retrieved_via: manual
+transferable_mechanism: Two kinds of truth never mix on one row.
+mechanism_tags: []
+transfer: Exato and Parecido as separate states with separate marks; the honesty rule
+  as a screen.
+do_not_copy:
+- its look, colours or type
+why_it_works: Two kinds of truth never mix on one row.
+surfaces:
+- Sift Page
+- Sift Record
+approval: current
+decided_by: JJ (brand/16_flows research, 2 Oct 2026)
