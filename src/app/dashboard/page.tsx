@@ -16,7 +16,7 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
         <Flash sp={sp} />
         <h1>Você está na lista de espera</h1>
         <p className="muted">
-          Recebemos sua candidatura, @{user.username}. Assim que for aprovada, você poderá criar links, montar a vitrine e receber
+          Recebemos sua candidatura, @{user.username}. Assim que for aprovada, você poderá criar links, montar a Sift Page e receber
           convites de marcas.
         </p>
       </div>

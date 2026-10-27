@@ -18,6 +18,8 @@ CREATE TABLE IF NOT EXISTS users (
   location      TEXT,
   -- Pontuação de confiança (0 a 100) que define o tier (BrandCreatorStatTiers / tiers do criador)
   trust_score   INTEGER NOT NULL DEFAULT 0,
+  line          TEXT,                       -- uma frase dela, nas palavras dela
+  seen_count    INTEGER NOT NULL DEFAULT 0, -- peças que a máquina viu nos posts (o "de 214")
   brand_id      INTEGER REFERENCES brands(id),
   created_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
@@ -53,7 +55,9 @@ CREATE TABLE IF NOT EXISTS products (
   category_id  INTEGER NOT NULL REFERENCES categories(id),
   price_cents  INTEGER NOT NULL,
   url          TEXT NOT NULL,
-  color        TEXT NOT NULL DEFAULT '#d9d2c5'   -- placeholder visual no lugar da foto
+  color        TEXT NOT NULL DEFAULT '#d9d2c5',  -- placeholder visual no lugar da foto
+  img          TEXT,                              -- recorte 4:5 no wash (public/catalog)
+  price_label  TEXT                               -- preço como a loja mostra (US$ 920, € 340)
 );
 
 -- Collections: seções da vitrine (shelf), looks, posts compráveis, gift guides
@@ -63,6 +67,7 @@ CREATE TABLE IF NOT EXISTS collections (
   name        TEXT NOT NULL,
   kind        TEXT NOT NULL DEFAULT 'shelf' CHECK (kind IN ('shelf','look','post','guide')),
   position    INTEGER NOT NULL DEFAULT 0,
+  quote_source TEXT,                       -- título nas palavras dela: de qual legenda e data veio
   created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -73,7 +78,11 @@ CREATE TABLE IF NOT EXISTS pins (
   product_id     INTEGER NOT NULL REFERENCES products(id),
   collection_id  INTEGER REFERENCES collections(id),
   note           TEXT NOT NULL DEFAULT '',
-  archived       INTEGER NOT NULL DEFAULT 0,   -- removido da vitrine, mas mantém o histórico
+  archived       INTEGER NOT NULL DEFAULT 0,   -- saiu da página, mas fica no registro (lei 2: nada se apaga)
+  match          TEXT NOT NULL DEFAULT 'exact' CHECK (match IN ('exact','similar')),  -- a peça da foto ou só parecida
+  tie            TEXT NOT NULL DEFAULT 'organic' CHECK (tie IN ('organic','gifted','affiliate','paid')),  -- relação comercial visível
+  tie_brand      TEXT,                          -- quem pagou ou mandou, quando há
+  source         TEXT,                          -- de onde veio: "Post 14.05.26"
   created_at     TEXT NOT NULL DEFAULT (datetime('now'))
 );
 

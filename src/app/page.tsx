@@ -1,81 +1,126 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
-import { listCurators, listProducts, listCircles } from "@/lib/repo";
-import { Avatar, ProductCard, TierBadge } from "@/components/ui";
-import { formatCompact } from "@/lib/money";
+import { siftPage } from "@/lib/page";
+import { Frame, Rec } from "@/components/ui";
+
+// A capa. Valor antes de qualquer cadastro: a primeira coisa que se vê é uma página pronta.
+
+const STATES = ["Rascunho", "Assinado", "No ar", "Verificado", "Nota emitida", "Pago"];
 
 export default function Home() {
-  const d = db();
-  const curators = listCurators(d, 6);
-  const trending = listProducts(d, { sort: "month" }).slice(0, 8);
-  const circles = listCircles(d);
+  const page = siftPage(db(), "criadora");
+  const four = page?.favourites ?? [];
   return (
     <>
-      <section className="hero">
-        <h1>Curadoria de quem entende, não do algoritmo.</h1>
-        <p className="muted">
-          Compre o que dermatologistas, stylists e designers de interiores realmente usam. Cada produto mostra quem indica e quantas
-          pessoas clicaram este mês.
-        </p>
-        <div className="row">
-          <Link className="btn" href="/shop">
-            Explorar a loja
-          </Link>
-          <Link className="btn ghost" href="/apply/creator">
-            Sou criador
-          </Link>
+      <section className="poster">
+        <Rec className="quiet settle">Sift · gosto, no registro</Rec>
+        <div style={{ alignSelf: "center" }}>
+          <h1 className="d1 settle d1s">
+            Ficam seis.
+            <br />O resto sai.
+          </h1>
         </div>
-      </section>
-
-      <section className="section">
-        <div className="row between">
-          <h2>Curadores</h2>
-          <Link href="/shop" className="small">
-            Ver todos
-          </Link>
-        </div>
-        <div className="grid grid-cards">
-          {curators.map((c) => (
-            <Link key={c.id} href={`/shop/${c.username}`} className="card row" style={{ textDecoration: "none" }}>
-              <Avatar name={c.name} />
-              <div>
-                <div>
-                  {c.name} <TierBadge score={c.trust_score} />
-                </div>
-                <div className="small muted">{c.bio}</div>
-                <div className="small muted">
-                  {formatCompact(c.followers)} seguidores · {c.num_pins} indicações
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <h2>Em alta este mês</h2>
-        <div className="grid grid-products">
-          {trending.map((p) => (
-            <ProductCard key={p.id} product={p} />
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <h2>Circles</h2>
-        <p className="muted">Junte curadores num grupo e veja a loja combinada deles.</p>
-        <div className="grid grid-cards">
-          {circles.map((g) => (
-            <Link key={g.id} href={`/shop/circles/${g.id}`} className="card" style={{ textDecoration: "none" }}>
-              <h3>{g.name}</h3>
-              <p className="small muted">{g.description}</p>
-              <div className="avatars">
-                {g.curators.map((c) => (
-                  <Avatar key={c.id} name={c.name} />
+        <div className="foot">
+          <div className="l settle d2s">
+            <p className="lead">Na frente, o gosto. Por trás, a prova.</p>
+            <p className="quiet">
+              A máquina acha cada peça nos posts dela. Ela guarda poucas, e a página fica pronta em minutos. Cada publi vem com contrato,
+              checagem do post, nota e Pix.
+            </p>
+            <div className="row" style={{ marginTop: 24 }}>
+              <Link className="btn" href="/shop/criadora">
+                Ver uma Sift Page
+              </Link>
+              <Link className="btn ghost" href="/home/creators">
+                Sou criadora
+              </Link>
+            </div>
+          </div>
+          {four.length > 0 && page && (
+            <Link href="/shop/criadora" className="r piece settle d3s" aria-label="Abrir a página de @criadora">
+              <div className="four" style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}>
+                {four.map((p) => (
+                  <Frame key={p.pin_id} src={p.img} alt={`${p.brand}, ${p.title}`} />
                 ))}
               </div>
+              <div className="cap">
+                <div className="rec row" style={{ gap: 8 }}>
+                  <span className="kept-tag" aria-hidden />
+                  <span>
+                    {page.user.name} · ficaram {page.kept_count} de {page.seen_count}
+                  </span>
+                </div>
+              </div>
             </Link>
-          ))}
+          )}
+        </div>
+      </section>
+
+      <section className="section grid12" style={{ rowGap: 24 }}>
+        <div className="c-label">
+          <Rec>01 · A página, na frente</Rec>
+        </div>
+        <div className="c-body">
+          <h2>Bom gosto merece nome e sobrenome.</h2>
+          <p className="quiet">
+            Cada peça diz se é exatamente aquela ou uma parecida, e de onde veio a relação com a marca: orgânico, recebido, afiliado ou publi.
+            O que ela viu e deixou de fora continua lá, tracejado. Ninguém finge que escolheu tudo.
+          </p>
+        </div>
+      </section>
+
+      <section className="section grid12" style={{ rowGap: 24 }}>
+        <div className="c-label">
+          <Rec>02 · O registro, por trás</Rec>
+        </div>
+        <div className="c-body">
+          <h2>Cada publi, com contrato e recibo.</h2>
+          <p className="quiet">
+            A Sift lê o contrato, confere se a marca não bate com uma exclusividade, olha o post no ar e emite a nota. O dinheiro só se move
+            quando uma pessoa aprova.
+          </p>
+          <ol className="steps" style={{ marginTop: 32 }}>
+            {STATES.map((s, i) => (
+              <li key={s} className={i < 4 ? "done" : ""}>
+                {s}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="section grid12" style={{ rowGap: 24 }}>
+        <div className="c-label">
+          <Rec>03 · O que a gente promete</Rec>
+        </div>
+        <div className="c-body">
+          <table>
+            <tbody>
+              <tr>
+                <td>Nota de gosto</td>
+                <td className="quiet">Nunca.</td>
+              </tr>
+              <tr>
+                <td>Discordar</td>
+                <td className="quiet">É dado, fica no registro.</td>
+              </tr>
+              <tr>
+                <td>Comissão</td>
+                <td className="quiet">Nunca muda a ordem das peças.</td>
+              </tr>
+              <tr>
+                <td>Cupom e dupe</td>
+                <td className="quiet">Nunca.</td>
+              </tr>
+              <tr>
+                <td>O que saiu</td>
+                <td className="quiet">Não se apaga em silêncio.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="small quiet" style={{ marginTop: 24 }}>
+            Por enquanto, é pouca gente. De propósito.
+          </p>
         </div>
       </section>
     </>

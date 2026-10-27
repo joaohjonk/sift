@@ -50,6 +50,8 @@ export interface Product {
   price_cents: number;
   url: string;
   color: string;
+  img: string | null;
+  price_label: string | null;
 }
 
 export interface ProductWithStats extends Product {
@@ -203,13 +205,24 @@ export function getProduct(db: DB, id: number): ProductWithStats | undefined {
 export function productPromoters(db: DB, productId: number) {
   return db
     .prepare(
-      `SELECT u.id, u.username, u.name, u.trust_score, pi.id AS pin_id,
+      `SELECT u.id, u.username, u.name, u.trust_score, pi.id AS pin_id, pi.match, pi.tie, pi.tie_brand, pi.created_at AS kept_at,
          (SELECT count(*) FROM clicks k WHERE k.pin_id = pi.id AND k.created_at >= datetime('now','-30 days')) AS clicks_month
        FROM pins pi JOIN users u ON u.id = pi.user_id
        WHERE pi.product_id = ? AND pi.archived = 0 AND u.status = 'active'
        GROUP BY u.id ORDER BY u.trust_score DESC`,
     )
-    .all(productId) as { id: number; username: string; name: string; trust_score: number; pin_id: number; clicks_month: number }[];
+    .all(productId) as {
+      id: number;
+      username: string;
+      name: string;
+      trust_score: number;
+      pin_id: number;
+      match: "exact" | "similar";
+      tie: "organic" | "gifted" | "affiliate" | "paid";
+      tie_brand: string | null;
+      kept_at: string;
+      clicks_month: number;
+    }[];
 }
 
 export function listCurators(db: DB, limit = 50) {

@@ -1,0 +1,898 @@
+[
+ {
+  "id": "mansur-candy-hobo",
+  "brand": "Mansur Gavriel",
+  "name": "Bolsa Candy Hobo",
+  "full": "Candy Hobo, Chocolate",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "R$ 3.570",
+  "price_cents": 357000,
+  "url": "https://www.mansurgavriel.com/products/candy-hobo-chocolate-3",
+  "tags": [
+   "sculptural",
+   "romantic"
+  ]
+ },
+ {
+  "id": "sayeg-serena",
+  "brand": "Victoria Sayeg",
+  "name": "Brinco Serena",
+  "full": "Brinco Serena Topázio Gota em Prata com Banho de Ouro",
+  "category": "accessories",
+  "slot": "accessory",
+  "origin": "br",
+  "price": "R$ 1.490",
+  "price_cents": 149000,
+  "url": "https://victoriasayeg.com/products/brinco-serena-topazio-gota-prata-banho-ouro",
+  "tags": [
+   "romantic",
+   "night"
+  ]
+ },
+ {
+  "id": "isolda-porcelana",
+  "brand": "Isolda",
+  "name": "Camisa Porcelana",
+  "full": "Camisa Porcelana, Marfim",
+  "category": "womens",
+  "slot": "top",
+  "origin": "br",
+  "price": "R$ 1.298",
+  "price_cents": 129800,
+  "url": "https://isoldabrasil.com.br/products/camisa-porcelana-marfim?variant=45682823561407",
+  "tags": [
+   "maximal",
+   "artisanal"
+  ]
+ },
+ {
+  "id": "rhode-lip-vanilla",
+  "brand": "Rhode",
+  "name": "Tratamento labial",
+  "full": "Peptide lip treatment rhode vanilla",
+  "category": "beauty",
+  "slot": "none",
+  "origin": "intl",
+  "price": "US$ 20",
+  "price_cents": 10800,
+  "url": "https://www.rhodeskin.com/products/peptide-lip-treatment-rhode-vanilla",
+  "tags": [
+   "gourmand",
+   "minimal"
+  ]
+ },
+ {
+  "id": "paloma-guida",
+  "brand": "Paloma Wool",
+  "name": "Bolsa Guida",
+  "full": "No 2829 / Guida",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "€ 390",
+  "price_cents": 241800,
+  "url": "https://www.palomawool.com/products/guida-small-square-tote-handbag-small-pocket-intenseblue",
+  "tags": [
+   "bold",
+   "urban"
+  ]
+ },
+ {
+  "id": "nk-regata-norah",
+  "brand": "NK",
+  "name": "Regata de tricô Norah",
+  "full": "Regata Tricot Norah",
+  "category": "womens",
+  "slot": "top",
+  "origin": "br",
+  "price": "R$ 556,36",
+  "price_cents": 55600,
+  "url": "https://www.nk.com.br/regata-tricot-norah-bl330238-0003/p",
+  "tags": [
+   "minimal",
+   "tactile"
+  ]
+ },
+ {
+  "id": "fellow-stagg",
+  "brand": "Fellow",
+  "name": "Chaleira Stagg EKG",
+  "full": "Stagg EKG Electric Kettle",
+  "category": "home",
+  "slot": "home",
+  "origin": "intl",
+  "price": "US$ 229.95",
+  "price_cents": 124200,
+  "url": "https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle?variant=45391756722276",
+  "tags": [
+   "minimal",
+   "sculptural"
+  ]
+ },
+ {
+  "id": "nk-jeans-aila",
+  "brand": "NK",
+  "name": "Calça jeans Aila",
+  "full": "Calça Jeans Aila",
+  "category": "womens",
+  "slot": "bottom",
+  "origin": "br",
+  "price": "R$ 954,54",
+  "price_cents": 95500,
+  "url": "https://www.nk.com.br/calca-jeans-aila-ca331199-6076/p",
+  "tags": [
+   "urban",
+   "minimal"
+  ]
+ },
+ {
+  "id": "cordera-wool-pants",
+  "brand": "Cordera",
+  "name": "Calça de lã",
+  "full": "LOW Rise Virgin Wool Pants",
+  "category": "womens",
+  "slot": "bottom",
+  "origin": "intl",
+  "price": "R$ 2.800",
+  "price_cents": 280000,
+  "url": "https://www.cordera.es/products/low-rise-virgin-wool-pants-beige-fall-winter-26?variant=57802253599051",
+  "tags": [
+   "tailored",
+   "quiet"
+  ]
+ },
+ {
+  "id": "sallve-vitc-bastao",
+  "brand": "Sallve",
+  "name": "Bastão vitamina C",
+  "full": "Bastão Vitamina C Pura 10%",
+  "category": "beauty",
+  "slot": "none",
+  "origin": "br",
+  "price": "R$ 74,90",
+  "price_cents": 7500,
+  "url": "https://www.sallve.com.br/products/bastao-vitamina-c-pura",
+  "tags": [
+   "fresh",
+   "sun"
+  ]
+ },
+ {
+  "id": "loewe-earth-elixir",
+  "brand": "Loewe",
+  "name": "Perfume Earth Elixir",
+  "full": "Earth Elixir Eau de Parfum, Perfume Unissex 100ml",
+  "category": "fragrance",
+  "slot": "none",
+  "origin": "intl",
+  "price": "R$ 2.960",
+  "price_cents": 296000,
+  "url": "https://www.neeche.com.br/loewe-earth-elixir-eau-de-parfum-perfume-unissex-100ml/p",
+  "tags": [
+   "green",
+   "woody"
+  ]
+ },
+ {
+  "id": "slj-la-donna",
+  "brand": "Sophie Lou Jacobsen",
+  "name": "Vaso La Donna",
+  "full": "La Donna",
+  "category": "home",
+  "slot": "home",
+  "origin": "intl",
+  "price": "US$ 850",
+  "price_cents": 459000,
+  "url": "https://www.sophieloujacobsen.com/products/la-donna?variant=45453484326956",
+  "tags": [
+   "sculptural",
+   "romantic"
+  ]
+ },
+ {
+  "id": "beryl-venetian",
+  "brand": "Le Monde Béryl",
+  "name": "Sapato Venetian",
+  "full": "Venetian Kitten Mule / Black Mesh",
+  "category": "womens",
+  "slot": "shoes",
+  "origin": "intl",
+  "price": "£ 372",
+  "price_cents": 267800,
+  "url": "https://www.lemondeberyl.com/products/venetian-kitten-heel-mesh?variant=43241652977841",
+  "tags": [
+   "romantic",
+   "night"
+  ]
+ },
+ {
+  "id": "birman-clarita-slingback",
+  "brand": "Alexandre Birman",
+  "name": "Slingback Clarita",
+  "full": "Clarita Slingback 85 Black",
+  "category": "womens",
+  "slot": "shoes",
+  "origin": "br",
+  "price": "US$ 795",
+  "price_cents": 429300,
+  "url": "https://alexandrebirman.com/products/clarita-slingback-85-black-suede-p26?variant=55622462341193",
+  "tags": [
+   "night",
+   "romantic"
+  ]
+ },
+ {
+  "id": "toteme-clip-top-handle",
+  "brand": "Toteme",
+  "name": "Bolsa Clip preta",
+  "full": "Clip grained-leather top handle black",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "€ 1.090",
+  "price_cents": 700,
+  "url": "https://toteme.com/en-int/products/clip-grained-leather-top-handle-black",
+  "tags": [
+   "minimal",
+   "sculptural"
+  ]
+ },
+ {
+  "id": "zerezes-nori",
+  "brand": "Zerezes",
+  "name": "Óculos Nori",
+  "full": "Norí, Óculos de Sol",
+  "category": "accessories",
+  "slot": "head",
+  "origin": "br",
+  "price": "R$ 995",
+  "price_cents": 99500,
+  "url": "https://www.zerezes.com.br/products/nori-oculos-de-sol?variant=54111960301932",
+  "tags": [
+   "sun",
+   "bold"
+  ]
+ },
+ {
+  "id": "diptyque-figuier-candle",
+  "brand": "Diptyque",
+  "name": "Vela Figuier",
+  "full": "Figuier, Bougie modèle classique",
+  "category": "home",
+  "slot": "home",
+  "origin": "intl",
+  "price": "€ 65",
+  "price_cents": 40300,
+  "url": "https://diptyqueparis.com/fr-fr/products/bougie-modele-classique-figuier-fi2",
+  "tags": [
+   "green",
+   "heritage"
+  ]
+ },
+ {
+  "id": "aluf-borogodo",
+  "brand": "Aluf",
+  "name": "Vestido Borogodó",
+  "full": "Vestido Borogodó",
+  "category": "womens",
+  "slot": "dress",
+  "origin": "br",
+  "price": "R$ 1.592,36",
+  "price_cents": 159200,
+  "url": "https://www.nk.com.br/vestido-borogodo-aluf-vs011448-0533/p",
+  "tags": [
+   "minimal",
+   "sculptural"
+  ]
+ },
+ {
+  "id": "therow-park-tote",
+  "brand": "The Row",
+  "name": "Bolsa Park Tote",
+  "full": "Small Park Tote Bag",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "US$ 1,620",
+  "price_cents": 874800,
+  "url": "https://www.therow.com/products/park-tote-small-black-ans-2",
+  "tags": [
+   "minimal",
+   "quiet"
+  ]
+ },
+ {
+  "id": "chemex-six-cup",
+  "brand": "Chemex",
+  "name": "Seis xícaras",
+  "full": "Six Cup Classic CHEMEX®",
+  "category": "home",
+  "slot": "home",
+  "origin": "intl",
+  "price": "US$ 49.50",
+  "price_cents": 26700,
+  "url": "https://www.chemexcoffeemaker.com/products/six-cup-classic-chemex",
+  "tags": [
+   "heritage",
+   "minimal"
+  ]
+ },
+ {
+  "id": "agmes-margot",
+  "brand": "Agmes",
+  "name": "Brincos Margot",
+  "full": "Margot Earrings",
+  "category": "accessories",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "US$ 610",
+  "price_cents": 329400,
+  "url": "https://www.agmesnyc.com/products/margot-earrings",
+  "tags": [
+   "sculptural",
+   "artisanal"
+  ]
+ },
+ {
+  "id": "jilsander-cannolo",
+  "brand": "Jil Sander",
+  "name": "Bolsa Cannolo",
+  "full": "Bolsa Cannolo Sm",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "R$ 17.990,80",
+  "price_cents": 1799100,
+  "url": "https://www.nk.com.br/bolsa-cannolo-sm-jil-sander-ba010779-0515/p",
+  "tags": [
+   "minimal",
+   "sculptural"
+  ]
+ },
+ {
+  "id": "lm-manta-dress",
+  "brand": "Lauren Manoogian",
+  "name": "Vestido Manta",
+  "full": "Manta Dress",
+  "category": "womens",
+  "slot": "dress",
+  "origin": "intl",
+  "price": "US$ 830",
+  "price_cents": 448200,
+  "url": "https://www.laurenmanoogian.com/products/manta-dress?variant=57414994100390",
+  "tags": [
+   "tactile",
+   "minimal"
+  ]
+ },
+ {
+  "id": "baserange-mason-tee",
+  "brand": "Baserange",
+  "name": "Camiseta Mason",
+  "full": "Mason Tee Shirt",
+  "category": "womens",
+  "slot": "top",
+  "origin": "intl",
+  "price": "€ 160",
+  "price_cents": 99200,
+  "url": "https://www.baserange.com/products/mason-tee-shirt-in-mabon-green?variant=59488995967310",
+  "tags": [
+   "quiet",
+   "green"
+  ]
+ },
+ {
+  "id": "sn-loenne",
+  "brand": "Studio Nicholson",
+  "name": "Tricô Loenne",
+  "full": "Loenne Knit in Camel",
+  "category": "womens",
+  "slot": "top",
+  "origin": "intl",
+  "price": "£ 330",
+  "price_cents": 237600,
+  "url": "https://www.studionicholson.com/products/loenne-knit-in-camel?variant=57027135046007",
+  "tags": [
+   "quiet",
+   "tactile"
+  ]
+ },
+ {
+  "id": "cordera-balloon-dress",
+  "brand": "Cordera",
+  "name": "Vestido balonê",
+  "full": "Crinkled Balloon Dress",
+  "category": "womens",
+  "slot": "dress",
+  "origin": "intl",
+  "price": "R$ 4.076",
+  "price_cents": 407600,
+  "url": "https://www.cordera.es/products/crinkled-balloon-dress-white-fall-winter-26",
+  "tags": [
+   "sculptural",
+   "romantic"
+  ]
+ },
+ {
+  "id": "bader-rich-cream",
+  "brand": "Augustinus Bader",
+  "name": "The Rich Cream",
+  "full": "The Rich Cream",
+  "category": "beauty",
+  "slot": "none",
+  "origin": "intl",
+  "price": "£ 450",
+  "price_cents": 324000,
+  "url": "https://augustinusbader.com/en-uk/products/the-rich-cream?variant=56938733142342",
+  "tags": [
+   "minimal",
+   "quiet"
+  ]
+ },
+ {
+  "id": "toteme-belted-bucket",
+  "brand": "Toteme",
+  "name": "Bolsa saco caramelo",
+  "full": "Belted grained-leather bucket bag tan",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "€ 1.080",
+  "price_cents": 700,
+  "url": "https://toteme.com/en-int/products/belted-grained-leather-bucket-bag-tan",
+  "tags": [
+   "quiet",
+   "tactile"
+  ]
+ },
+ {
+  "id": "osklen-aroma-vento",
+  "brand": "Osklen",
+  "name": "Aroma Vento",
+  "full": "Aroma vento",
+  "category": "home",
+  "slot": "home",
+  "origin": "br",
+  "price": "R$ 267",
+  "price_cents": 26700,
+  "url": "https://www.osklen.com.br/aroma-vento-unica-62078-00/p",
+  "tags": [
+   "fresh",
+   "coastal"
+  ]
+ },
+ {
+  "id": "misci-bolsa-eli",
+  "brand": "Misci",
+  "name": "Bolsa Eli",
+  "full": "Bolsa ELI",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "br",
+  "price": "R$ 2.780",
+  "price_cents": 278000,
+  "url": "https://www.misci.com/bolsa-eli-000133037/p",
+  "tags": [
+   "sculptural",
+   "artisanal"
+  ]
+ },
+ {
+  "id": "lenny-bucket-rafia",
+  "brand": "Lenny Niemeyer",
+  "name": "Chapéu bucket de ráfia",
+  "full": "Chapéu Bucket Ráfia Natural",
+  "category": "accessories",
+  "slot": "head",
+  "origin": "br",
+  "price": "R$ 798",
+  "price_cents": 79800,
+  "url": "https://www.lennyniemeyer.com.br/chapeu-bucket-rafia-natural-50040029/p",
+  "tags": [
+   "sun",
+   "artisanal"
+  ]
+ },
+ {
+  "id": "khaite-lotus",
+  "brand": "Khaite",
+  "name": "Bolsa Lotus",
+  "full": "Small Lotus Tote in Natural and Black Distressed Leather",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "R$ 15.963",
+  "price_cents": 1596300,
+  "url": "https://www.khaite.com/products/small-lotus-tote-in-natural-black",
+  "tags": [
+   "sun",
+   "sculptural"
+  ]
+ },
+ {
+  "id": "creamy-vitc-gold",
+  "brand": "Creamy",
+  "name": "Sérum Vitamina C Gold",
+  "full": "Sérum Antioxidante Clareador, Vitamina C Gold",
+  "category": "beauty",
+  "slot": "none",
+  "origin": "br",
+  "price": "R$ 123,49",
+  "price_cents": 12300,
+  "url": "https://www.creamy.com.br/vitamina-c-gold/p",
+  "tags": [
+   "fresh",
+   "minimal"
+  ]
+ },
+ {
+  "id": "amyi-2-13",
+  "brand": "Amyi",
+  "name": "Perfume Amyi 2.13",
+  "full": "2.13",
+  "category": "fragrance",
+  "slot": "none",
+  "origin": "br",
+  "price": "R$ 860",
+  "price_cents": 86000,
+  "url": "https://amyi.co/products/amyi-2-13",
+  "tags": [
+   "woody",
+   "romantic"
+  ]
+ },
+ {
+  "id": "therow-soft-loafer",
+  "brand": "The Row",
+  "name": "Mocassim Soft",
+  "full": "Soft Loafer",
+  "category": "womens",
+  "slot": "shoes",
+  "origin": "intl",
+  "price": "US$ 1,290",
+  "price_cents": 696600,
+  "url": "https://www.therow.com/products/soft-loafer-black?variant=40368562831465",
+  "tags": [
+   "quiet",
+   "tailored"
+  ]
+ },
+ {
+  "id": "molle-bule",
+  "brand": "Molle Design",
+  "name": "Bule de cerâmica",
+  "full": "Bulê",
+  "category": "home",
+  "slot": "home",
+  "origin": "br",
+  "price": "R$ 384",
+  "price_cents": 38400,
+  "url": "https://molledesign.com/products/bule?variant=43043044098137",
+  "tags": [
+   "artisanal",
+   "tactile"
+  ]
+ },
+ {
+  "id": "ippodo-matcha-kit",
+  "brand": "Ippodo Tea",
+  "name": "Kit de matcha",
+  "full": "Hajime-no-Ippodo Matcha Starter Kit",
+  "category": "home",
+  "slot": "home",
+  "origin": "intl",
+  "price": "¥ 8,300",
+  "price_cents": 29900,
+  "url": "https://global.ippodo-tea.co.jp/products/utensils895651",
+  "tags": [
+   "artisanal",
+   "green"
+  ]
+ },
+ {
+  "id": "nk-bota-haven",
+  "brand": "NK",
+  "name": "Bota de camurça Haven",
+  "full": "Bota Camurça Haven",
+  "category": "womens",
+  "slot": "shoes",
+  "origin": "br",
+  "price": "R$ 2.394,54",
+  "price_cents": 239500,
+  "url": "https://www.nk.com.br/bota-camurca-haven-cd010326-10222/p",
+  "tags": [
+   "tactile",
+   "urban"
+  ]
+ },
+ {
+  "id": "lemaire-croissant",
+  "brand": "Lemaire",
+  "name": "Bolsa Croissant mini",
+  "full": "Mini Fortune Croissant BAG in Alpaca Nubuck",
+  "category": "womens",
+  "slot": "accessory",
+  "origin": "intl",
+  "price": "€ 790",
+  "price_cents": 489800,
+  "url": "https://www.lemaire.fr/products/mini-fortune-croissant-bag-unisex-br007-ebony-brown-ll0189-alpaca-nubuck-leather",
+  "tags": [
+   "sculptural",
+   "tactile"
+  ]
+ },
+ {
+  "id": "isolda-saia-maranhao",
+  "brand": "Isolda",
+  "name": "Saia Maranhão",
+  "full": "Saia Maranhão, Off White",
+  "category": "womens",
+  "slot": "bottom",
+  "origin": "br",
+  "price": "R$ 1.299",
+  "price_cents": 129900,
+  "url": "https://isoldabrasil.com.br/products/saia-maranhao-off-white?variant=44616921284799",
+  "tags": [
+   "artisanal",
+   "romantic"
+  ]
+ },
+ {
+  "id": "diptyque-do-son",
+  "brand": "Diptyque",
+  "name": "Perfume Do Son",
+  "full": "Do Son, Eau de parfum",
+  "category": "fragrance",
+  "slot": "none",
+  "origin": "intl",
+  "price": "€ 180",
+  "price_cents": 111600,
+  "url": "https://diptyqueparis.com/fr-fr/products/eau-de-parfum-do-son-dosonp75cv1",
+  "tags": [
+   "romantic",
+   "coastal"
+  ]
+ },
+ {
+  "id": "margiela-tabi",
+  "brand": "Maison Margiela",
+  "name": "Sapatilha Tabi",
+  "full": "Tabi Ballerina Black",
+  "category": "womens",
+  "slot": "shoes",
+  "origin": "intl",
+  "price": "US$ 1,050",
+  "price_cents": 567000,
+  "url": "https://www.maisonmargiela.com/en-us/tabi-ballerina-S58WZ0127P3753T8013.html",
+  "tags": [
+   "sculptural",
+   "bold"
+  ]
+ },
+ {
+  "id": "ferm-tereo-vase",
+  "brand": "Ferm Living",
+  "name": "Vaso Tereo",
+  "full": "Tereo Round Vase, Off-White Speckle",
+  "category": "home",
+  "slot": "home",
+  "origin": "intl",
+  "price": "€ 139",
+  "price_cents": 86200,
+  "url": "https://fermliving.com/products/tereo-round-vase-h18-off-white-speckle",
+  "tags": [
+   "tactile",
+   "minimal"
+  ]
+ },
+ {
+  "id": "handred-gargantilha",
+  "brand": "Handred",
+  "name": "Gargantilha de cerâmica",
+  "full": "Gargantilha Cerâmica",
+  "category": "accessories",
+  "slot": "accessory",
+  "origin": "br",
+  "price": "R$ 898,50",
+  "price_cents": 89800,
+  "url": "https://www.handred.com.br/products/gargantilha-ceramica",
+  "tags": [
+   "artisanal",
+   "sculptural"
+  ]
+ },
+ {
+  "id": "granado-carioca-liquido",
+  "brand": "Granado",
+  "name": "Sabonete líquido Carioca",
+  "full": "Sabonete Líquido Carioca 300ml",
+  "category": "beauty",
+  "slot": "none",
+  "origin": "br",
+  "price": "R$ 59",
+  "price_cents": 5900,
+  "url": "https://www.granado.com.br/granado/sabonete-liquido-granado-carioca-300ml",
+  "tags": [
+   "fresh",
+   "heritage"
+  ]
+ },
+ {
+  "id": "phebo-vela-icones",
+  "brand": "Phebo",
+  "name": "Vela perfumada Ícones",
+  "full": "Vela Cerâmica Ícones Odor de Rosas 400g",
+  "category": "home",
+  "slot": "home",
+  "origin": "br",
+  "price": "R$ 285",
+  "price_cents": 28500,
+  "url": "https://www.phebo.com.br/phebo/vela-perfumada-ceramica-icones-odor-de-rosas-400g",
+  "tags": [
+   "heritage",
+   "romantic"
+  ]
+ },
+ {
+  "id": "crisbarros-lirio",
+  "brand": "Cris Barros",
+  "name": "Vestido Lírio",
+  "full": "Vestido Lirio Nuvem Off",
+  "category": "womens",
+  "slot": "dress",
+  "origin": "br",
+  "price": "R$ 3.988",
+  "price_cents": 398800,
+  "url": "https://www.crisbarros.com.br/vestido-lirio-nuvem-off-42ve683ppb-0001/p",
+  "tags": [
+   "romantic",
+   "quiet"
+  ]
+ },
+ {
+  "id": "crisbarros-toulon",
+  "brand": "Cris Barros",
+  "name": "Camisa Toulon branca",
+  "full": "Camisa Toulon Branco",
+  "category": "womens",
+  "slot": "top",
+  "origin": "br",
+  "price": "R$ 2.942",
+  "price_cents": 294200,
+  "url": "https://www.crisbarros.com.br/camisa-toulon-branco-42cs318pnb-0001/p",
+  "tags": [
+   "tailored",
+   "minimal"
+  ]
+ },
+ {
+  "id": "farm-bolsa-viva",
+  "brand": "Farm Rio",
+  "name": "Bolsa Viva Lenço Solar",
+  "full": "Bolsa Viva Lenço Solar",
+  "category": "accessories",
+  "slot": "accessory",
+  "origin": "br",
+  "price": "R$ 469",
+  "price_cents": 46900,
+  "url": "https://www.farmrio.com.br/bolsa-viva-lenco-solar-etc_v27_lenco-solar_ow-374593-57917/p",
+  "tags": [
+   "sun",
+   "bold"
+  ]
+ },
+ {
+  "id": "adriana-maillot-acrilico",
+  "brand": "Adriana Degreas",
+  "name": "Maiô frente única Backgammon azul",
+  "full": "Maillot Frente Única Backgammon Lisos Azul Tamisa",
+  "category": "womens",
+  "slot": "dress",
+  "origin": "br",
+  "price": "R$ 1.080",
+  "price_cents": 108000,
+  "url": "https://adrianadegreas.com.br/products/maillot-frente-unica-5",
+  "tags": [
+   "sun",
+   "sculptural"
+  ]
+ },
+ {
+  "id": "lapima-paloma",
+  "brand": "Lapima",
+  "name": "Óculos de sol Paloma",
+  "full": "Paloma Sunglasses Caramel",
+  "category": "accessories",
+  "slot": "head",
+  "origin": "br",
+  "price": "R$ 4.070",
+  "price_cents": 407000,
+  "url": "https://www.lapima.com/products/sun-paloma",
+  "tags": [
+   "heritage",
+   "sun"
+  ]
+ },
+ {
+  "id": "care-rose-mist",
+  "brand": "Care Natural Beauty",
+  "name": "Bruma hidratante Rose Mist",
+  "full": "Bruma Hidratante Care Rose Mist",
+  "category": "beauty",
+  "slot": "none",
+  "origin": "br",
+  "price": "R$ 105",
+  "price_cents": 10500,
+  "url": "https://carenb.com/products/bruma-care-rose-mist",
+  "tags": [
+   "fresh",
+   "romantic"
+  ]
+ },
+ {
+  "id": "miumiu-leather-ballerinas",
+  "brand": "Miu Miu",
+  "name": "Sapatilha de couro preta",
+  "full": "Leather Ballerinas Black",
+  "category": "womens",
+  "slot": "shoes",
+  "origin": "intl",
+  "price": "US$ 1,070",
+  "price_cents": 577800,
+  "url": "https://www.miumiu.com/us/en/p/leather-ballerinas/5F794D_XUU_F0002_F_DX05",
+  "tags": [
+   "romantic",
+   "minimal"
+  ]
+ },
+ {
+  "id": "lelabo-santal-33",
+  "brand": "Le Labo",
+  "name": "Perfume Santal 33",
+  "full": "Santal 33 Eau de Parfum 50ml",
+  "category": "fragrance",
+  "slot": "none",
+  "origin": "intl",
+  "price": "US$ 250",
+  "price_cents": 135000,
+  "url": "https://www.lelabofragrances.com/santal-33-147.html",
+  "tags": [
+   "woody",
+   "urban"
+  ]
+ },
+ {
+  "id": "trousseau-toalha-twill",
+  "brand": "Trousseau",
+  "name": "Toalha de banho portuguesa Twill",
+  "full": "Toalha de Banho Portuguesa Twill",
+  "category": "home",
+  "slot": "home",
+  "origin": "br",
+  "price": "R$ 1.660",
+  "price_cents": 166000,
+  "url": "https://www.trousseau.com.br/toalha-de-banho-portuguesa-twill-0331010004/p",
+  "tags": [
+   "tactile",
+   "quiet"
+  ]
+ },
+ {
+  "id": "j01-loafer-black",
+  "brand": "J'01 Studio",
+  "name": "Loafer preto",
+  "full": "Loafer Black",
+  "category": "womens",
+  "slot": "shoes",
+  "origin": "br",
+  "price": "R$ 1.598",
+  "price_cents": 159800,
+  "url": "https://j01studio.com/products/loafer-black",
+  "tags": [
+   "sculptural",
+   "night"
+  ]
+ }
+]

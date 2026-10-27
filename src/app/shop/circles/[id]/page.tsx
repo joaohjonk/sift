@@ -29,7 +29,7 @@ export default async function Circle({ params }: { params: Promise<{ id: string 
             key={p.id}
             product={p}
             note={
-              p.in_circle > 1 ? <div className="proof">{p.in_circle} curadores deste circle indicam</div> : null
+              p.in_circle > 1 ? <div className="proof">{p.in_circle} pessoas deste círculo guardaram</div> : null
             }
           />
         ))}

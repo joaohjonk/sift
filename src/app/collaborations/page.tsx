@@ -39,7 +39,7 @@ export default async function Collaborations({ searchParams }: { searchParams: P
                 {c.tasks.map((t) => (
                   <tr key={t.id}>
                     <td>{t.title}</td>
-                    <td>{t.due_date ?? "—"}</td>
+                    <td>{t.due_date ?? "sem data"}</td>
                     <td>{formatMoney(t.price_cents)}</td>
                     <td>
                       <StatusPill status={t.status} />

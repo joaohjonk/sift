@@ -66,7 +66,7 @@ export default async function BrandTrack({ searchParams }: { searchParams: Promi
         <thead>
           <tr>
             <th>Produto</th>
-            <th>Curadores</th>
+            <th>Criadoras</th>
             <th>Cliques (semana / mês / total)</th>
           </tr>
         </thead>

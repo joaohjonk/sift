@@ -1,47 +1,64 @@
 import Link from "next/link";
-import { TIERS } from "@/lib/tiers";
-import { formatMoney } from "@/lib/money";
+import { Rec } from "@/components/ui";
+
+// Para criadoras. Sem tabela de níveis na frente: nenhuma nota de gosto, nunca.
+
+const STEPS: [string, string][] = [
+  ["Dê um sift no seu post", "A máquina acha cada peça na foto. Você diz se é exatamente aquela, parecida ou se sai."],
+  ["Fique com poucas", "A página mostra o que ficou e conta o que você viu. O que saiu continua no registro, tracejado."],
+  ["Cada publi, com contrato e recibo", "A Sift lê o contrato, avisa se bate com uma exclusividade, confere o post, emite a nota e paga no Pix."],
+];
 
 export default function ForCreators() {
   return (
     <>
-      <section className="hero">
-        <h1>Sua recomendação vale dinheiro.</h1>
-        <p className="muted">
-          Crie links de qualquer produto das lojas parceiras, monte sua vitrine e receba comissão por cada venda. Quanto mais as pessoas
-          confiam em você, mais o app destrava.
-        </p>
-        <Link className="btn" href="/apply/creator">
-          Quero entrar
-        </Link>
+      <section className="poster" style={{ minHeight: "min(calc(100svh - 64px), 820px)" }}>
+        <Rec className="quiet settle">Para criadoras</Rec>
+        <h1 className="d1 settle d1s" style={{ alignSelf: "center", maxWidth: "12ch" }}>
+          Bom gosto merece nome e sobrenome.
+        </h1>
+        <div className="foot">
+          <div className="l settle d2s">
+            <p className="lead">Você continua postando do seu jeito. Os links moram na página, nunca no feed.</p>
+            <div className="row" style={{ marginTop: 24 }}>
+              <Link className="btn" href="/apply/creator">
+                Pedir convite
+              </Link>
+              <Link className="btn ghost" href="/shop/criadora">
+                Ver uma Sift Page
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
-      <h2 className="section">Tiers por confiança</h2>
-      <div className="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Tier</th>
-              <th>Pontuação mínima</th>
-              <th>Bônus</th>
-              <th>Créditos de indicação</th>
-              <th>O que libera</th>
-            </tr>
-          </thead>
-          <tbody>
-            {TIERS.map((t) => (
-              <tr key={t.name}>
-                <td>
-                  <span className={`tier tier-${t.name}`}>{t.name}</span>
-                </td>
-                <td>{t.minScore}</td>
-                <td>{t.bonusCents ? formatMoney(t.bonusCents) : "—"}</td>
-                <td>{t.referralCredits || "—"}</td>
-                <td>{t.perks.join(" · ")}</td>
-              </tr>
+
+      <section className="section grid12" style={{ rowGap: 24 }}>
+        <div className="c-label">
+          <Rec>Como funciona</Rec>
+        </div>
+        <div className="c-body">
+          <ol className="steps">
+            {STEPS.map(([t, d]) => (
+              <li key={t} className="done">
+                <div className="lead">{t}</div>
+                <p className="quiet" style={{ margin: "6px 0 0" }}>
+                  {d}
+                </p>
+              </li>
             ))}
-          </tbody>
-        </table>
-      </div>
+          </ol>
+        </div>
+      </section>
+
+      <section className="section grid12" style={{ rowGap: 24 }}>
+        <div className="c-label">
+          <Rec>Quem entra</Rec>
+        </div>
+        <div className="c-body">
+          <h2>Por enquanto, é pouca gente. De propósito.</h2>
+          <p className="quiet">Uma turma de criadoras por vez, com convite de verdade. Sem lista de espera infinita, sem contador de seguidores.</p>
+        </div>
+      </section>
     </>
   );
 }

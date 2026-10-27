@@ -11,7 +11,7 @@ export default function ForBrands() {
   return (
     <>
       <section className="hero">
-        <h1>Os curadores certos já indicam você.</h1>
+        <h1>As criadoras certas já guardaram você.</h1>
         <p className="muted">Conecte a sua loja, veja quem vende seus produtos e transforme isso em parceria.</p>
         <Link className="btn" href="/login?next=/brand">
           Entrar como marca

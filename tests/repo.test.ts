@@ -157,11 +157,11 @@ describe("marca", () => {
   it("analytics conta promoters por tier e discover filtra", () => {
     const aurora = brand("Aurora Skincare");
     const a = repo.brandAnalytics(db, aurora.id);
-    expect(a.byTier.Icon).toBe(1);
+    expect(a.byTier.Icon).toBe(2) // marinaskin + @criadora (publi do sérum);
     expect(a.clicks30).toBeGreaterThan(0);
     expect(repo.discoverCreators(db, aurora.id, { minScore: 70 }).every((c) => c.trust_score >= 70)).toBe(true);
     expect(repo.discoverCreators(db, aurora.id, { q: "Rio de Janeiro" }).map((c) => c.username)).toEqual(["luizaveste"]);
-    expect(repo.discoverCreators(db, aurora.id, { department: "Quarto" }).map((c) => c.username).sort()).toEqual(["casadabia", "joaninhacasa"]);
+    expect(repo.discoverCreators(db, aurora.id, { department: "Quarto" }).map((c) => c.username).sort()).toEqual(["casadabia", "criadora", "joaninhacasa"]);
   });
 
   it("onboarding só conclui com loja, clique e pedido", () => {

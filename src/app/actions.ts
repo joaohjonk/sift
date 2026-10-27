@@ -67,7 +67,7 @@ export async function createPin(fd: FormData) {
 
 export async function deletePin(fd: FormData) {
   const user = await requireUser(["creator"], "/links");
-  await attempt("/links", "Link removido da vitrine.", () => repo.deletePin(db(), user.id, num(fd, "pin_id")));
+  await attempt("/links", "Peça tirada da página. Fica no registro.", () => repo.deletePin(db(), user.id, num(fd, "pin_id")));
 }
 
 export async function createCollection(fd: FormData) {

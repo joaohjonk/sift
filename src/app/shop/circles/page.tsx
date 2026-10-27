@@ -27,7 +27,7 @@ export default async function Circles({ searchParams }: { searchParams: Promise<
     <>
       <Flash sp={sp} />
       <h1>Circles</h1>
-      <p className="muted">Um circle junta curadores e mostra a loja combinada: o que mais aparece entre eles vem primeiro.</p>
+      <p className="muted">Um círculo junta pessoas em quem você confia. O que mais aparece entre elas vem primeiro.</p>
       <h2 className="section">Editoriais</h2>
       <div className="grid grid-cards">
         {editorial.map((g) => (

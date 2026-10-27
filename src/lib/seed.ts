@@ -1,5 +1,6 @@
 import type Database from "better-sqlite3";
 import { commissionFor } from "./money";
+import CATALOG from "./catalog.json";
 
 // Dados de demonstração. Marcas e criadores são fictícios.
 
@@ -226,6 +227,124 @@ export function seed(db: Database.Database) {
     db.prepare("INSERT INTO payouts (user_id, amount_cents, method, status, created_at) VALUES (?, ?, ?, 'sent', datetime('now','-14 days'))").run(
       creatorIds.marinaskin, 150_00, "pix",
     );
+
+    seedCriadora(db, rand, { brandIds, prodIds, insPin, insClick, insOrder });
   });
   tx();
+}
+
+// ---------- A Sift Page de demonstração: @criadora ----------
+// Fictícia. Peças reais do catálogo curado pelo JJ (recortes 4:5 no wash).
+// Publi e recebido só aparecem com as marcas fictícias, para não inventar deal com marca real.
+
+type Pin = { id: string; match?: "exact" | "similar"; out?: boolean };
+type Section = { title: string; source: string; pins: Pin[]; extra?: { prod: number; tie: "paid" | "gifted"; brand: number }[] };
+
+const CATALOG_CATEGORIES: Record<string, [string, string, string]> = {
+  womens: ["Moda", "Roupas", "Feminino"],
+  mens: ["Moda", "Roupas", "Masculino"],
+  accessories: ["Moda", "Acessórios", "Acessórios"],
+  beauty: ["Beleza", "Skincare", "Cuidados"],
+  fragrance: ["Beleza", "Perfumes", "Perfumes"],
+  home: ["Casa", "Objetos", "Objetos"],
+};
+
+const CRIADORA: Section[] = [
+  {
+    title: "sempre comigo",
+    source: "legenda de 14.05.26",
+    pins: [{ id: "mansur-candy-hobo" }, { id: "zerezes-nori" }, { id: "sayeg-serena" }, { id: "rhode-lip-vanilla" }, { id: "lemaire-croissant", match: "similar" }, { id: "toteme-clip-top-handle", out: true }, { id: "paloma-guida", out: true }],
+  },
+  {
+    title: "high low, desde sempre",
+    source: "legenda de 30.04.26",
+    pins: [{ id: "khaite-lotus" }, { id: "nk-jeans-aila" }, { id: "baserange-mason-tee", match: "similar" }, { id: "therow-soft-loafer" }, { id: "farm-bolsa-viva" }, { id: "jilsander-cannolo", out: true }],
+  },
+  {
+    title: "uniforme de verão",
+    source: "legenda de 02.01.26",
+    pins: [{ id: "isolda-porcelana" }, { id: "cordera-wool-pants", match: "similar" }, { id: "birman-clarita-slingback" }, { id: "lapima-paloma" }, { id: "adriana-maillot-acrilico" }, { id: "crisbarros-lirio", match: "similar" }, { id: "aluf-borogodo", out: true }, { id: "margiela-tabi", out: true }],
+  },
+  {
+    title: "pele sem esforço",
+    source: "legenda de 21.08.26",
+    pins: [{ id: "sallve-vitc-bastao" }, { id: "creamy-vitc-gold" }, { id: "care-rose-mist" }, { id: "bader-rich-cream", match: "similar" }, { id: "loewe-earth-elixir", out: true }],
+    extra: [{ prod: 1, tie: "paid", brand: 0 }],
+  },
+  {
+    title: "casa com cheiro de casa",
+    source: "legenda de 09.09.26",
+    pins: [{ id: "diptyque-figuier-candle" }, { id: "molle-bule" }, { id: "phebo-vela-icones" }, { id: "slj-la-donna", match: "similar" }, { id: "osklen-aroma-vento", out: true }],
+    extra: [{ prod: 3, tie: "paid", brand: 1 }],
+  },
+];
+
+function seedCriadora(
+  db: Database.Database,
+  rand: () => number,
+  h: {
+    brandIds: number[];
+    prodIds: number[];
+    insPin: Database.Statement;
+    insClick: Database.Statement;
+    insOrder: Database.Statement;
+  },
+) {
+  const brandByName = new Map<string, number>();
+  const insBrand = db.prepare("INSERT INTO brands (name, domain, description, default_commission_rate) VALUES (?, ?, '', 0.1)");
+  const catId = new Map<string, number>();
+  const insCat = db.prepare("INSERT INTO categories (industry, department, name) VALUES (?, ?, ?)");
+  const insProd = db.prepare(
+    "INSERT INTO products (title, brand_id, category_id, price_cents, url, color, img, price_label) VALUES (?, ?, ?, ?, ?, '#F4F4F1', ?, ?)",
+  );
+  const prod = new Map<string, { id: number; price: number }>();
+  for (const item of CATALOG) {
+    if (!brandByName.has(item.brand)) {
+      const domain = new URL(item.url).hostname.replace(/^www\./, "");
+      brandByName.set(item.brand, Number(insBrand.run(item.brand, domain).lastInsertRowid));
+    }
+    const [ind, dep, name] = CATALOG_CATEGORIES[item.category] ?? ["Moda", "Acessórios", "Acessórios"];
+    const key = `${ind}/${dep}/${name}`;
+    if (!catId.has(key)) catId.set(key, Number(insCat.run(ind, dep, name).lastInsertRowid));
+    const id = Number(
+      insProd.run(item.name, brandByName.get(item.brand), catId.get(key), item.price_cents, item.url, `/catalog/${item.id}.webp`, item.price)
+        .lastInsertRowid,
+    );
+    prod.set(item.id, { id, price: item.price_cents });
+  }
+
+  const user = Number(
+    db
+      .prepare(
+        `INSERT INTO users (username, name, legal_name, role, status, bio, instagram, followers, trust_score, line, seen_count)
+         VALUES ('criadora', '@criadora', 'Criadora de Demonstração', 'creator', 'active', ?, '@criadora', 0, 88, ?, 103)`,
+      )
+      .run("Moda, beleza e casa.", "Pouca coisa, escolhida devagar, usada até gastar.").lastInsertRowid,
+  );
+  const insColl = db.prepare("INSERT INTO collections (user_id, name, kind, position, quote_source) VALUES (?, ?, 'shelf', ?, ?)");
+  const insPin = db.prepare(
+    `INSERT INTO pins (user_id, product_id, collection_id, archived, match, tie, tie_brand, source, created_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, datetime('now', ?))`,
+  );
+  const brandName = (i: number) => (db.prepare("SELECT name FROM brands WHERE id = ?").get(h.brandIds[i]) as { name: string }).name;
+  CRIADORA.forEach((sec, i) => {
+    const coll = Number(insColl.run(user, sec.title, i + 1, sec.source).lastInsertRowid);
+    const post = `Post ${sec.source.replace("legenda de ", "")}`;
+    const all = [
+      ...sec.pins.map((p) => ({ product: prod.get(p.id)!.id, price: prod.get(p.id)!.price, match: p.match ?? "exact", out: p.out ? 1 : 0, tie: "affiliate", brand: null as string | null })),
+      ...(sec.extra ?? []).map((e) => ({ product: h.prodIds[e.prod], price: 0, match: "exact", out: 0, tie: e.tie, brand: brandName(e.brand) })),
+    ];
+    for (const p of all) {
+      const pinId = Number(insPin.run(user, p.product, coll, p.out, p.match, p.tie, p.brand, post, `-${20 + Math.floor(rand() * 60)} days`).lastInsertRowid);
+      if (p.out) continue;
+      const n = 20 + Math.floor(rand() * 90);
+      for (let k = 0; k < n; k++) {
+        const days = Math.floor(rand() * 60);
+        h.insClick.run(pinId, "BR", `-${days} days`);
+        if (p.price && rand() < 0.035) {
+          h.insOrder.run(pinId, p.price, commissionFor(p.price, 0.1), days > 30 ? "approved" : "pending", `-${days} days`);
+        }
+      }
+    }
+  });
 }

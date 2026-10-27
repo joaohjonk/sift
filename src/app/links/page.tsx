@@ -65,7 +65,7 @@ export default async function Links({ searchParams }: { searchParams: Promise<Re
           </div>
           <button>Criar coleção</button>
           <p className="small muted" style={{ marginTop: 10 }}>
-            Sua vitrine pública: <Link href={`/shop/${user.username}`}>/shop/{user.username}</Link>
+            Sua Sift Page: <Link href={`/shop/${user.username}`}>/shop/{user.username}</Link>
           </p>
         </form>
       </div>
@@ -91,7 +91,7 @@ export default async function Links({ searchParams }: { searchParams: Promise<Re
                   {p.product.title}
                   <div className="small muted">{p.product.brand_name}</div>
                 </td>
-                <td>{collections.find((c) => c.id === p.collection_id)?.name ?? "—"}</td>
+                <td>{collections.find((c) => c.id === p.collection_id)?.name ?? "sem seção"}</td>
                 <td>{formatRate(p.rate)}</td>
                 <td>
                   {p.clicks_month} / {p.clicks_total}

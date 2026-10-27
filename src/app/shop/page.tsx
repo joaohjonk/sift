@@ -11,7 +11,7 @@ export default async function Shop({ searchParams }: { searchParams: Promise<SP>
   const cats = catalogHierarchy(d);
   const departments = [...new Set(cats.map((c) => `${c.industry} · ${c.department}`))];
   const categoryId = sp.category ? Number(sp.category) : undefined;
-  const sort = (sp.sort as "month" | "week" | "promoters") ?? "month";
+  const sort = (sp.sort as "month" | "week" | "promoters") ?? "promoters";
   const products = listProducts(d, { categoryId, department: sp.department, q: sp.q, sort });
   const qs = (patch: SP) => {
     const next = { ...sp, ...patch };
@@ -42,18 +42,18 @@ export default async function Shop({ searchParams }: { searchParams: Promise<SP>
       </nav>
       <div>
         <div className="row between">
-          <h1>Loja</h1>
+          <h1>Peças</h1>
           <form className="row" action="/shop">
-            <input name="q" placeholder="Buscar produto ou marca" defaultValue={sp.q} style={{ width: 240 }} />
-            <select name="sort" defaultValue={sort} style={{ width: 200 }}>
-              <option value="month">Mais clicados no mês</option>
-              <option value="week">Mais clicados na semana</option>
-              <option value="promoters">Mais indicados</option>
+            <input name="q" placeholder="Buscar peça ou marca" aria-label="Buscar peça ou marca" defaultValue={sp.q} style={{ width: 240 }} />
+            <select name="sort" aria-label="Ordem" defaultValue={sort} style={{ width: 200 }}>
+              <option value="promoters">Guardadas por mais gente</option>
+              <option value="month">Mais procuradas no mês</option>
+              <option value="week">Mais procuradas na semana</option>
             </select>
-            <button className="small">Filtrar</button>
+            <button className="small">Dê um sift</button>
           </form>
         </div>
-        <p className="muted small">{products.length} produtos</p>
+        <p className="muted small">{products.length} peças. Cada uma guardada por alguém com nome.</p>
         <div className="grid grid-products">
           {products.map((p) => (
             <ProductCard key={p.id} product={p} />
