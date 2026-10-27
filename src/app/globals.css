@@ -269,3 +269,69 @@ th { color: var(--color-quiet); border-bottom-color: var(--color-ink); }
   .split { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 760px) { .split-l, .split-r { grid-column: 1 / -1 !important; } }
+
+/* ---------- Onde comprar: o filtro da Sift Page ---------- */
+.market-tabs { position: sticky; top: 64px; background: var(--color-paper); z-index: 5; margin-top: calc(var(--u) * 4); }
+.market-tabs .lang { margin-left: auto; }
+.market-note { margin: 0 0 calc(var(--u) * 2); max-width: 70ch; }
+.piece .cap .market { font-size: 12px; color: var(--color-quiet); margin-top: 2px; }
+
+/* ---------- Sift this post ---------- */
+.sift-post { grid-column: 1 / span 5; }
+.sift-card { grid-column: 7 / span 6; min-width: 0; }
+@media (max-width: 760px) { .sift-post, .sift-card { grid-column: 1 / -1; } }
+.sift-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: calc(var(--u) * 2); }
+.sift-strip .frame.focus { outline: 2px solid var(--color-red); outline-offset: -2px; }
+.sift-strip .frame.gone { opacity: .3; }
+.sift-piece { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: calc(var(--u) * 2.5); margin-top: calc(var(--u) * 2); touch-action: pan-y; user-select: none; transition: transform var(--motion-duration-settle) var(--ease); }
+@media (max-width: 480px) { .sift-piece { grid-template-columns: minmax(0, 140px) minmax(0, 1fr); } }
+.sift-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--u); margin-top: calc(var(--u) * 3); }
+.sift-choices button.on { border-color: var(--color-ink); }
+.kbd { font-size: 11px; border: 1px solid currentColor; padding: 0 5px; opacity: .7; }
+.sift-progress { display: flex; flex-wrap: wrap; gap: 3px; margin: calc(var(--u) * 3) 0 var(--u); }
+.sift-progress i { width: 10px; height: 10px; border: 1px solid var(--color-ghost); }
+.sift-progress i.k { background: var(--color-red); border-color: var(--color-red); }
+.sift-progress i.s { border-color: var(--color-ink); }
+.sift-progress i.o { border-style: dashed; border-color: var(--color-quiet); }
+.sift-progress i.now { outline: 1px solid var(--color-ink); outline-offset: 1px; }
+
+/* ---------- Sift Record e Dinheiro ---------- */
+.table-scroll { overflow-x: auto; }
+.ledger { min-width: 720px; border-top: 1px solid var(--color-ink); }
+.ledger td, .ledger th { vertical-align: top; }
+.ledger .r { text-align: right; }
+.deal-steps .bar { display: flex; gap: 3px; margin-bottom: 6px; }
+.deal-steps .bar i { width: 14px; height: 6px; background: var(--color-ghost); }
+.deal-steps .bar i.on { background: var(--color-ink); }
+.deal-steps .bar i.live { background: var(--color-red); }
+.deal-steps.full { margin-top: calc(var(--u) * 3); }
+.deal-steps.full .bar i { flex: 1; height: 8px; }
+.deal-steps.full .labels { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3px; }
+@media (max-width: 560px) { .deal-steps.full .labels { display: none; } }
+.side-tags { display: inline-flex; flex-direction: column; gap: 4px; }
+.deal-fields { grid-column: 1 / span 5; min-width: 0; }
+.deal-act { grid-column: 7 / span 6; min-width: 0; }
+@media (max-width: 760px) { .deal-fields, .deal-act { grid-column: 1 / -1; } }
+dl.kv { display: grid; grid-template-columns: max-content minmax(0, 1fr); margin: 0; border-top: var(--hair); }
+dl.kv dt, dl.kv dd { margin: 0; padding: 10px 0; border-bottom: var(--hair); }
+dl.kv dt { padding-right: calc(var(--u) * 3); color: var(--color-quiet); font-size: var(--rec); text-transform: uppercase; letter-spacing: calc(var(--font-tracking-record) * 1em); padding-top: 13px; }
+ul.plain { list-style: none; margin: 0; padding: 0; }
+.need { border: 1px solid var(--color-red); padding: calc(var(--u) * 2.5); margin-bottom: calc(var(--u) * 2); }
+.need.calm { border-color: var(--color-ghost); }
+.need p:last-child { margin-bottom: 0; }
+.hold { display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 20px 0 12px; border: 1px solid var(--color-ink); background: var(--color-paper); color: var(--color-ink); user-select: none; -webkit-user-select: none; touch-action: none; }
+.hold:hover { background: var(--color-paper); }
+.hold .pad { width: 28px; height: 28px; border: 1px solid var(--color-red); position: relative; overflow: hidden; flex: none; }
+.hold .pad i { position: absolute; inset: auto 0 0 0; height: 0; background: var(--color-red); }
+.hold.holding .pad i { height: 100%; transition: height 1.1s linear; }
+.undo { display: flex; gap: calc(var(--u) * 2); align-items: center; flex-wrap: wrap; }
+.money-line { position: relative; height: 220px; border-bottom: 1px solid var(--color-ink); margin-top: calc(var(--u) * 6); }
+.money-line .tick { position: absolute; bottom: 0; width: 14px; margin-left: -7px; background: var(--color-ink); }
+.money-line .tick.on { background: var(--color-red); }
+.money-line .tick span { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); padding-bottom: 6px; white-space: nowrap; text-align: center; }
+.money-line .tick:hover { text-decoration: none; }
+.money-line .today { position: absolute; left: 0; top: 100%; padding-top: 6px; }
+.pick { display: flex; flex-direction: column; border-top: var(--hair); }
+.pick a { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: var(--hair); }
+.pick a.on { color: var(--color-red); }
+.pick a:hover { text-decoration: none; }

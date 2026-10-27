@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { tierFor } from "@/lib/tiers";
 import { formatMoney } from "@/lib/money";
 import type { Product, ProductWithStats } from "@/lib/repo";
-import { TIE_LABEL, type PagePiece } from "@/lib/page";
+import { MARKET_LABEL, TIE_LABEL, type PagePiece } from "@/lib/page";
 
 /** O quadrado da Sift. Abaixo de 24 px aparece sozinho, sem o nome. */
 export function Mark({ size }: { size?: "alone" | "lg" }) {
@@ -127,6 +127,7 @@ export function Piece({ piece, href, index }: { piece: PagePiece; href: string; 
           {piece.brand}, {piece.title.charAt(0).toLowerCase() + piece.title.slice(1)}
         </div>
         <div className="price">{priceOf(piece)}</div>
+        <div className="market">{MARKET_LABEL[piece.market].pt}</div>
       </div>
     </a>
   );

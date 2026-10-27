@@ -1,6 +1,7 @@
 import type Database from "better-sqlite3";
 import { commissionFor } from "./money";
 import CATALOG from "./catalog.json";
+import { seedRecord } from "./record";
 
 // Dados de demonstração. Marcas e criadores são fictícios.
 
@@ -229,6 +230,8 @@ export function seed(db: Database.Database) {
     );
 
     seedCriadora(db, rand, { brandIds, prodIds, insPin, insClick, insOrder });
+    const criadora = db.prepare("SELECT id FROM users WHERE username = 'criadora'").get() as { id: number };
+    seedRecord(db, criadora.id);
   });
   tx();
 }
@@ -295,7 +298,7 @@ function seedCriadora(
   const catId = new Map<string, number>();
   const insCat = db.prepare("INSERT INTO categories (industry, department, name) VALUES (?, ?, ?)");
   const insProd = db.prepare(
-    "INSERT INTO products (title, brand_id, category_id, price_cents, url, color, img, price_label) VALUES (?, ?, ?, ?, ?, '#F4F4F1', ?, ?)",
+    "INSERT INTO products (title, brand_id, category_id, price_cents, url, color, img, price_label, market) VALUES (?, ?, ?, ?, ?, '#F4F4F1', ?, ?, ?)",
   );
   const prod = new Map<string, { id: number; price: number }>();
   for (const item of CATALOG) {
@@ -307,7 +310,7 @@ function seedCriadora(
     const key = `${ind}/${dep}/${name}`;
     if (!catId.has(key)) catId.set(key, Number(insCat.run(ind, dep, name).lastInsertRowid));
     const id = Number(
-      insProd.run(item.name, brandByName.get(item.brand), catId.get(key), item.price_cents, item.url, `/catalog/${item.id}.webp`, item.price)
+      insProd.run(item.name, brandByName.get(item.brand), catId.get(key), item.price_cents, item.url, `/catalog/${item.id}.webp`, item.price, item.origin === "br" ? "br" : "abroad")
         .lastInsertRowid,
     );
     prod.set(item.id, { id, price: item.price_cents });

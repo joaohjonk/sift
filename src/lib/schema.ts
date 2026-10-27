@@ -57,7 +57,8 @@ CREATE TABLE IF NOT EXISTS products (
   url          TEXT NOT NULL,
   color        TEXT NOT NULL DEFAULT '#d9d2c5',  -- placeholder visual no lugar da foto
   img          TEXT,                              -- recorte 4:5 no wash (public/catalog)
-  price_label  TEXT                               -- preço como a loja mostra (US$ 920, € 340)
+  price_label  TEXT,                              -- preço como a loja mostra (US$ 920, € 340)
+  market       TEXT NOT NULL DEFAULT 'br' CHECK (market IN ('br','abroad'))  -- onde dá para comprar: no Brasil ou só lá fora
 );
 
 -- Collections: seções da vitrine (shelf), looks, posts compráveis, gift guides
@@ -220,6 +221,41 @@ CREATE TABLE IF NOT EXISTS chat_messages (
   created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- Sift Record: cada contrato da criadora, do rascunho ao dinheiro na conta.
+-- Estados na ordem: Rascunho, Assinado, No ar, Verificado, Nota emitida, Pago.
+-- Os estados de lado (Atrasado, Conflito, Direitos acabando, Precisa dela) são calculados, nunca guardados.
+CREATE TABLE IF NOT EXISTS deals (
+  id              INTEGER PRIMARY KEY,
+  user_id         INTEGER NOT NULL REFERENCES users(id),
+  brand_name      TEXT NOT NULL,
+  title           TEXT NOT NULL,
+  fee_cents       INTEGER NOT NULL,
+  state           TEXT NOT NULL DEFAULT 'draft' CHECK (state IN ('draft','signed','live','verified','invoiced','paid')),
+  signed_on       TEXT,
+  pay_terms_days  INTEGER,                    -- prazo de pagamento do contrato
+  due_on          TEXT,                       -- quando o dinheiro deve entrar
+  rights_until    TEXT,                       -- até quando a marca pode usar a imagem
+  example         INTEGER NOT NULL DEFAULT 1, -- 1 = valor de exemplo na demo
+  created_at      TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE TABLE IF NOT EXISTS deal_posts (
+  id         INTEGER PRIMARY KEY,
+  deal_id    INTEGER NOT NULL REFERENCES deals(id),
+  url        TEXT NOT NULL,
+  posted_on  TEXT NOT NULL,
+  disclosed  INTEGER NOT NULL DEFAULT 1       -- aviso de publi presente (CONAR)
+);
+-- O que sai em nome dela. Nada sai sem ela segurar; dez segundos para desfazer.
+CREATE TABLE IF NOT EXISTS deal_actions (
+  id         INTEGER PRIMARY KEY,
+  deal_id    INTEGER NOT NULL REFERENCES deals(id),
+  kind       TEXT NOT NULL CHECK (kind IN ('charge','ask_terms','propose_clause','advance_cash')),
+  status     TEXT NOT NULL DEFAULT 'queued' CHECK (status IN ('queued','undone','sent')),
+  sends_at   TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_deals_user ON deals(user_id);
 CREATE INDEX IF NOT EXISTS idx_pins_user ON pins(user_id);
 CREATE INDEX IF NOT EXISTS idx_pins_product ON pins(product_id);
 CREATE INDEX IF NOT EXISTS idx_clicks_pin ON clicks(pin_id, created_at);
