@@ -54,6 +54,26 @@ tests/              testes
 | `/onboarding/brand`, `/connect/shopify` | `/brand/onboarding` | Loja, rastreio de clique, pedidos, atualizações, cancelamentos |
 | admin | `/admin` | Aprovar candidaturas |
 
+## API JSON (para o app de celular)
+
+Base `/api/v1`. Login de demonstração: `POST /api/v1/session {"username": "marinaskin"}` devolve um `token`;
+mande `Authorization: Bearer <token>` nas rotas logadas. Erros vêm como `{ "error": "..." }`.
+
+| Rota | Quem | O que faz |
+| --- | --- | --- |
+| `GET /me` | logado | Usuário e tier |
+| `GET /shop/hierarchy` | público | Categorias |
+| `GET /shop/products?department=&category=&q=&sort=month\|week\|promoters` | público | Catálogo com prova social |
+| `GET /shop/products/:id` | público | Produto e quem indica |
+| `GET /curators`, `GET /curators/:username` | público | Curadores e vitrine |
+| `GET /circles`, `POST /circles`, `GET /circles/:id` | público / consumidor | Circles e loja combinada |
+| `GET /creator/summary` | criador | Cliques, pedidos, saldo, tier |
+| `GET /pins`, `POST /pins`, `DELETE /pins/:id` | criador | Links rastreados |
+| `GET /collections`, `POST /collections` | criador | Coleções |
+| `GET /payouts`, `POST /payouts` | criador | Ganhos e saque |
+| `GET /opportunities`, `PATCH /opportunities/:id` | criador | Aceitar, recusar, enviar post |
+| `GET /brand/analytics`, `GET /brand/discover` | marca | Track e Discover |
+
 ## Ainda não feito
 
 - Autenticação de verdade, integrações reais de loja (webhooks de pedido) e pagamento.
