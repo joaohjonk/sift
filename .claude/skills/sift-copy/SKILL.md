@@ -54,6 +54,8 @@ A Sift Page works like a gallery wall: it shows what stayed and says nothing abo
 
 ## Killed lines
 
+- "Ficaram X de Y" on any public surface. Killed by JJ, 27 Oct 2026: "muito ruim", give it a more legal tone. Say what the pieces are for the reader ("17 peças para comprar, tiradas dos últimos 60 posts"; on her page, first person: "26 peças que eu uso de verdade").
+
 - "Ficam seis. O resto sai." Killed by JJ, 28 Oct 2026: it reads as a rule, says nothing about what Sift does, and fails the 3 second test.
 
 ## Skills in this folder and where they come from

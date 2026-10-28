@@ -45,7 +45,7 @@ export default function Home() {
                 <div className="rec row" style={{ gap: 8 }}>
                   <span className="kept-tag" aria-hidden />
                   <span>
-                    {page.user.name} · ficaram {page.kept_count} de {page.seen_count}
+                    {page.user.name} · {page.kept_count} peças que ela usa de verdade
                   </span>
                 </div>
               </div>

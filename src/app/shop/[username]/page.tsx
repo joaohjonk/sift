@@ -41,10 +41,10 @@ export default async function SiftPageView({
             {page.user.line ?? page.user.bio}
           </p>
         </div>
-        <div className="ratio settle d1s" aria-label={`Ficaram ${page.kept_count} de ${page.seen_count}`}>
-          <Rec className="quiet">Ficaram</Rec>
+        <div className="ratio settle d1s" aria-label={`${page.kept_count} peças que eu uso de verdade`}>
+          <Rec className="quiet">Peças que eu uso de verdade</Rec>
           <div className="d1 num">{page.kept_count}</div>
-          <div className="of num">de {page.seen_count}</div>
+          <p className="quiet" style={{ margin: "8px 0 0" }}>Todas tiradas dos meus posts.</p>
         </div>
       </section>
 
@@ -70,7 +70,7 @@ export default async function SiftPageView({
           <div className="row" style={{ marginTop: 32 }}>
             <ShareButton
               title={`As quatro de ${handle}`}
-              text={`${handle} na Sift. Ficaram ${page.kept_count} de ${page.seen_count}.`}
+              text={`As peças que ${handle} usa de verdade, na Sift.`}
               path={path}
               label="Compartilhar minhas quatro"
             />
