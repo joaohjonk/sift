@@ -48,8 +48,10 @@ Se uma tela não ajuda uma escolha a ganhar autor, histórico ou consequência, 
 
 **8. A página é dela, e fala em primeira pessoa.** A Sift Page de uma criadora é um perfil, como o Instagram, o TikTok ou um curso online: um registro de gosto que ela assinou e escolheu. Quem escolheu foi ela, nunca a Sift. Por isso tudo que é dito ali está na voz dela: "Meus favoritos", "Minhas quatro", "Do meu feed", "Descobri agora", "Ainda não achei o link dessas", "Alguns links me rendem comissão". Nunca "as favoritas dela", "do jeito dela", "a Sift achou para ela". Três vozes, cada uma no seu lugar:
 - **A voz dela**, em primeira pessoa: títulos, notas, o porquê de cada peça e o pedido de ajuda ("Sabe de onde é? Me conta").
-- **Linhas de registro e ações de quem visita**, neutras: `FICARAM 5 DE 7`, Compartilhar, Acompanhar, Ver na loja. Na página dela, a conta vem na voz dela ou some: "17 peças dos meus últimos 60 posts", nunca "Ficaram 17 de 42" no topo.
+- **Linhas de registro e ações de quem visita**, neutras: `SIFT 00291 · 12.03.26`, Compartilhar, Acompanhar, Ver na loja. Na página dela, a conta vem na voz dela ou some: "17 peças dos meus últimos 60 posts", nunca "Ficaram 17 de 42" no topo.
 - **A voz da Sift**, só nas superfícies da Sift: capa, Para criadoras, Registro, e o lado de dentro dela (Montar, Record, Dinheiro), onde a Sift fala com ela por "você".
+
+**O que ficou de fora não aparece.** Como numa galeria ou num museu, a página mostra o que entrou e não comenta, nem fala mal, do que não entrou. Nada de "deixei de fora", "testei e não ficou", contador de descartes ou caixa tracejada para quem visita. O que saiu vive só no registro dela, do lado de dentro (pilar 5). Peça que ainda não tem loja é outra coisa: entra como procura, na voz dela ("Ainda não achei o link dessas").
 
 Teste: se ela leria a frase em voz alta num story sem estranhar, está certo.
 
