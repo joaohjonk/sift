@@ -74,6 +74,25 @@ mande `Authorization: Bearer <token>` nas rotas logadas. Erros vêm como `{ "err
 | `GET /opportunities`, `PATCH /opportunities/:id` | criador | Aceitar, recusar, enviar post |
 | `GET /brand/analytics`, `GET /brand/discover` | marca | Track e Discover |
 
+## Fluxos da Sift além do ShopMy
+
+Vieram da call com uma criadora em 26.10.26 e da pesquisa de UX. Entre com a `@criadora` para ver.
+
+| Tela | O que faz |
+| --- | --- |
+| `/build` · Sift this post | A máquina sugere as peças de cada post; ela confirma com seta ou arrasto. Direita é Exato, cima é Parecido, esquerda tira. Termina em "Sift · k de n". Tirar não apaga: vai para o pontilhado da página. |
+| `/shop/<handle>?onde=br\|abroad` | Filtro da Sift Page: Compra no Brasil / Só lá fora (`&lang=en`: Shoppable in Brazil / Available abroad). Vem de `products.market`. |
+| `/record` e `/record/<id>` | Sift Record. Estados Rascunho, Assinado, No ar, Verificado, Nota emitida, Pago. Estados de lado calculados: Atrasado, Conflito (prazo acima de 90 dias), Direitos acabando, Precisa dela (entrega sem aviso de publi). Ação em nome dela só segurando o quadrado, com 10 s para desfazer. Proposta de cláusula de narrativa nos contratos abertos. |
+| `/finance` | Recebíveis em escala de tempo, receber hoje com o custo em reais, agência e Sift sobre o mesmo valor. |
+
+Leitura de um perfil público (posts com publi, marca marcada sem aviso, mediana de views, marcas que ela move sem ganhar):
+
+```bash
+APIFY_TOKEN=... npx tsx scripts/import-instagram.ts <handle> --limit 60 --people mae,amiga
+```
+
+Grava em `data/creators/<handle>/` (fora do git). Só perfis públicos, sem conta falsa nem telefone virtual.
+
 ## Ainda não feito
 
 - Autenticação de verdade, integrações reais de loja (webhooks de pedido) e pagamento.

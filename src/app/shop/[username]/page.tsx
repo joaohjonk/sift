@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { isFollowing } from "@/lib/repo";
-import { siftPage } from "@/lib/page";
+import { MARKET_LABEL, parseMarket, siftPage, type Market } from "@/lib/page";
 import { currentUser } from "@/lib/session";
 import { toggleFollow } from "../../actions";
 import { Flash, OutBox, Piece, Rec, recDate } from "@/components/ui";
@@ -21,7 +21,9 @@ export default async function SiftPageView({
   const { username } = await params;
   const sp = await searchParams;
   const d = db();
-  const page = siftPage(d, username);
+  const market = parseMarket(sp.onde);
+  const en = sp.lang === "en";
+  const page = siftPage(d, username, { market });
   if (!page) notFound();
   const me = await currentUser();
   const following = me ? isFollowing(d, me.id, page.user.id) : false;
@@ -48,7 +50,35 @@ export default async function SiftPageView({
         </div>
       </section>
 
-      {page.favourites.length > 0 && (
+      <nav className="tabs market-tabs" aria-label={en ? "Where to buy" : "Onde comprar"}>
+        {([null, "br", "abroad"] as (Market | null)[]).map((m) => {
+          const q = new URLSearchParams();
+          if (m) q.set("onde", m);
+          if (en) q.set("lang", "en");
+          const label = m ? MARKET_LABEL[m][en ? "en" : "pt"] : en ? "All" : "Tudo";
+          return (
+            <Link key={m ?? "all"} href={`${path}${q.size ? `?${q}` : ""}`} className={market === m ? "active" : ""} aria-current={market === m ? "page" : undefined}>
+              {label} <span className="num quiet">{page.market_counts[m ?? "all"]}</span>
+            </Link>
+          );
+        })}
+        <Link className="lang" href={`${path}?${new URLSearchParams({ ...(market ? { onde: market } : {}), ...(en ? {} : { lang: "en" }) })}`}>
+          {en ? "PT" : "EN"}
+        </Link>
+      </nav>
+      {market && (
+        <p className="small quiet market-note">
+          {market === "abroad"
+            ? en
+              ? "Pieces that only ship abroad. For each one, Sift looks for a Similar that ships in Brazil, and she approves it first."
+              : "Peças que só entregam lá fora. Para cada uma, a Sift procura um Parecido que entrega no Brasil, e ela aprova antes de aparecer."
+            : en
+              ? "Pieces sold in Brazil. Commission never changes the order."
+              : "Peças com loja no Brasil. A comissão nunca muda a ordem."}
+        </p>
+      )}
+
+      {!market && page.favourites.length > 0 && (
         <section className="section" aria-labelledby="as-quatro">
           <div className="grid12 edit-head">
             <div className="c-label">

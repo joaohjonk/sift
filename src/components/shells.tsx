@@ -8,6 +8,9 @@ export function CreatorShell({ children }: { children: ReactNode }) {
         title="Criador"
         links={[
           ["/dashboard", "Visão geral"],
+          ["/build", "Sift this post"],
+          ["/record", "Record"],
+          ["/finance", "Dinheiro"],
           ["/links", "Links e coleções"],
           ["/payouts", "Ganhos"],
           ["/opportunities", "Opportunities"],
