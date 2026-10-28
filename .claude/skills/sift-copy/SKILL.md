@@ -39,6 +39,10 @@ The Sift voice decides; the other skills are tools. When a tool's advice conflic
    - Record lines in caps follow `SIFT 00291 · FICOU COM @criadora · 12.03.26`.
 8. **Present.** Headlines and taglines go to JJ as 3 options with a recommendation, PT and EN side by side. Small UI strings ship directly.
 
+## The Sift Page speaks in the first person (JJ, 28 Oct 2026)
+
+The creator's page is her profile, signed and chosen by her, like her Instagram or TikTok. Every line she says on it is first person: "Minhas quatro", "O que descobri recentemente", "Recomprei 6 vezes", "Testei e deixei de fora". Never third person ("as favoritas dela", "do jeito dela"), and never Sift talking about her. Record lines and visitor actions (Compartilhar, Acompanhar, Ver na loja) stay neutral. Sift's own voice is for Sift surfaces only: the home, Para criadoras, the record and the brand view.
+
 ## Approved lines (JJ)
 
 - PT: "Bom gosto merece nome e sobrenome." · "Na frente, o gosto. Por trás, a prova." · "O boca a boca ganhou escala. O registro, não." · "Gosto aparece quando não dá para ficar com tudo." · "Cada publi, com contrato e recibo." · "Por enquanto, é pouca gente. De propósito." · "Dê um sift e monte seu look."

@@ -8,7 +8,8 @@ import { toggleFollow } from "../../actions";
 import { Flash, OutBox, Piece, Rec, recDate } from "@/components/ui";
 import { CopyLink, ShareButton } from "@/components/share";
 
-// A Sift Page. Mostrar poucos, contar muitos; o que saiu fica no registro.
+// A Sift Page. Fala sempre em primeira pessoa: é o perfil dela, assinado por ela (JJ, 28 out).
+// Mostrar poucos, contar muitos; o que saiu fica no registro.
 
 export default async function SiftPageView({
   params,
@@ -52,12 +53,12 @@ export default async function SiftPageView({
           <div className="grid12 edit-head">
             <div className="c-label">
               <Rec>
-                <span id="as-quatro">As quatro</span>
+                <span id="as-quatro">Minhas quatro</span>
               </Rec>
             </div>
             <div className="c-body">
               <p className="quiet" style={{ margin: 0 }}>
-                Se só desse para ficar com quatro.
+                Se eu só pudesse ficar com quatro, seriam estas.
               </p>
             </div>
           </div>
@@ -71,7 +72,7 @@ export default async function SiftPageView({
               title={`As quatro de ${handle}`}
               text={`${handle} na Sift. Ficaram ${page.kept_count} de ${page.seen_count}.`}
               path={path}
-              label="Compartilhar as quatro"
+              label="Compartilhar minhas quatro"
             />
             <CopyLink path={path} />
             {me && me.id !== page.user.id && (
@@ -110,7 +111,7 @@ export default async function SiftPageView({
                 <div className="c-label">
                   <Rec className="quiet">De fora, {s.left_out.length}</Rec>
                   <p className="small quiet" style={{ marginTop: 8 }}>
-                    Ela viu e deixou de fora. Continua no registro.
+                    Testei, olhei de perto e deixei de fora. Fica no registro.
                   </p>
                 </div>
                 <div className="c-body">
@@ -128,8 +129,8 @@ export default async function SiftPageView({
 
       {!page.sections.length && (
         <section className="section edit">
-          <p className="lead">Nada guardado ainda.</p>
-          <p className="quiet">Quando ela der um sift no primeiro post, as peças que ficarem aparecem aqui.</p>
+          <p className="lead">Ainda não guardei nada aqui.</p>
+          <p className="quiet">Quando eu der um sift no primeiro post, o que eu guardar aparece aqui.</p>
         </section>
       )}
 
