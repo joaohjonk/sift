@@ -19,7 +19,7 @@ Em caso de conflito, ganha o de cima.
 
 Se uma tela não ajuda uma escolha a ganhar autor, histórico ou consequência, ela não entra.
 
-## Artigo 2 · Os sete pilares
+## Artigo 2 · Os oito pilares
 
 **1. Prova de gosto.** Mostrar poucos, contar muitos. Toda edição diz a sua conta ("ficaram 6 de 214"). Nunca um catálogo, nunca uma grade infinita. Seis coisas escolhidas por vista, no máximo.
 
@@ -46,6 +46,13 @@ Se uma tela não ajuda uma escolha a ganhar autor, histórico ou consequência, 
 
 **7. Tempo lento.** Tudo se move devagar e assenta. Easing `cubic-bezier(.2,.7,.1,1)`, fades de 700 ms, assentamento de 900 a 1000 ms, imagem chega em 1,3 s vinda do wash. Movimento reduzido mostra o estado final.
 
+**8. A página é dela, e fala em primeira pessoa.** A Sift Page de uma criadora é um perfil, como o Instagram, o TikTok ou um curso online: um registro de gosto que ela assinou e escolheu. Quem escolheu foi ela, nunca a Sift. Por isso tudo que é dito ali está na voz dela: "Meus favoritos", "Minhas quatro", "Do meu feed", "Descobri agora", "Ainda não achei o link dessas", "Alguns links me rendem comissão". Nunca "as favoritas dela", "do jeito dela", "a Sift achou para ela". Três vozes, cada uma no seu lugar:
+- **A voz dela**, em primeira pessoa: títulos, notas, o porquê de cada peça e o pedido de ajuda ("Sabe de onde é? Me conta").
+- **Linhas de registro e ações de quem visita**, neutras: `FICARAM 5 DE 7`, Compartilhar, Acompanhar, Ver na loja. Na página dela, a conta vem na voz dela ou some: "17 peças dos meus últimos 60 posts", nunca "Ficaram 17 de 42" no topo.
+- **A voz da Sift**, só nas superfícies da Sift: capa, Para criadoras, Registro, e o lado de dentro dela (Montar, Record, Dinheiro), onde a Sift fala com ela por "você".
+
+Teste: se ela leria a frase em voz alta num story sem estranhar, está certo.
+
 ## Artigo 3 · Regras de tela, todas checáveis
 
 | Regra | Como checar |
@@ -58,7 +65,7 @@ Se uma tela não ajuda uma escolha a ganhar autor, histórico ou consequência, 
 | Texto de registro em caixa alta, +6%, números tabulares: `SIFT 00291 · FICOU COM @criadora · 12.03.26`. | revisão |
 | Toda área de toque tem 44 px. | `cstack type qa` + QA no celular |
 | Toda tela desenha cinco estados: carregando (wash, sem spinner), vazio, erro, sucesso e parcial. | tabela de estados no PR |
-| Português escrito em português, nunca traduzido. "Você" na interface. Sem travessão, sem exclamação, sem emoji. | as seis provas do `WRITING.md` |
+| Português escrito em português, nunca traduzido. "Você" nas telas da Sift; primeira pessoa na página da criadora (pilar 8). Sem travessão, sem exclamação, sem emoji. | as seis provas do `WRITING.md` |
 | Nunca: vitrine, storefront, curadoria, monetizar, "Compre agora", "não é X, é Y". | lista em `banned_language` |
 | Nunca nomear uma criadora que não assinou. Em demo é @criadora. Nunca nomear a cidade. | revisão |
 
