@@ -1,0 +1,4 @@
+# Prévia do app web. O Next roda no runtime da Netlify; o banco de demonstração é recriado em /tmp a cada início frio.
+[build]
+  command = "npm run build"
+  publish = ".next"
