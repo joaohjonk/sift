@@ -15,17 +15,15 @@ export default function Home() {
       <section className="poster">
         <Rec className="quiet settle">Sift · gosto, no registro</Rec>
         <div style={{ alignSelf: "center" }}>
-          <h1 className="d1 settle d1s">
-            Ficam seis.
-            <br />O resto sai.
+          <h1 className="d1 settle d1s" style={{ fontSize: "clamp(44px, 7.6vw, 124px)", maxWidth: "15ch" }}>
+            Seus posts viram uma página. Cada publi vira um recibo.
           </h1>
         </div>
         <div className="foot">
           <div className="l settle d2s">
-            <p className="lead">Na frente, o gosto. Por trás, a prova.</p>
-            <p className="quiet">
-              A máquina acha cada peça nos posts dela. Ela guarda poucas, e a página fica pronta em minutos. Cada publi vem com contrato,
-              checagem do post, nota e Pix.
+            <p className="lead">
+              A Sift acha as peças nas suas fotos. Você fica com poucas e a página sai em minutos. Quando a marca paga, contrato, post, nota e
+              Pix ficam no mesmo lugar.
             </p>
             <div className="row" style={{ marginTop: 24 }}>
               <Link className="btn" href="/shop/criadora">
@@ -64,7 +62,7 @@ export default function Home() {
           <h2>Bom gosto merece nome e sobrenome.</h2>
           <p className="quiet">
             Cada peça diz se é exatamente aquela ou uma parecida, e de onde veio a relação com a marca: orgânico, recebido, afiliado ou publi.
-            O que ela viu e deixou de fora continua lá, tracejado. Ninguém finge que escolheu tudo.
+            O que ela viu e deixou de fora continua lá, tracejado.
           </p>
         </div>
       </section>

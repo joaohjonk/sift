@@ -56,7 +56,7 @@ export default function ForCreators() {
         </div>
         <div className="c-body">
           <h2>Por enquanto, é pouca gente. De propósito.</h2>
-          <p className="quiet">Uma turma de criadoras por vez, com convite de verdade. Sem lista de espera infinita, sem contador de seguidores.</p>
+          <p className="quiet">Entra uma turma de criadoras por vez, por convite.</p>
         </div>
       </section>
     </>

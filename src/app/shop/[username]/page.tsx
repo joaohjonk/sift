@@ -110,7 +110,7 @@ export default async function SiftPageView({
                 <div className="c-label">
                   <Rec className="quiet">De fora, {s.left_out.length}</Rec>
                   <p className="small quiet" style={{ marginTop: 8 }}>
-                    Apareceu, ela olhou e não ficou. Continua no registro.
+                    Ela viu e deixou de fora. Continua no registro.
                   </p>
                 </div>
                 <div className="c-body">
