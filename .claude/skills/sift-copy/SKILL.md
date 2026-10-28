@@ -43,6 +43,10 @@ The Sift voice decides; the other skills are tools. When a tool's advice conflic
 
 The creator's page is her profile, signed and chosen by her, like her Instagram or TikTok. Every line she says on it is first person: "Minhas quatro", "O que descobri recentemente", "Recomprei 6 vezes", "Testei e deixei de fora". Never third person ("as favoritas dela", "do jeito dela"), and never Sift talking about her. Record lines and visitor actions (Compartilhar, Acompanhar, Ver na loja) stay neutral. Sift's own voice is for Sift surfaces only: the home, Para criadoras, the record and the brand view.
 
+## The public page never talks about what was left out (JJ, 28 Oct 2026)
+
+A Sift Page works like a gallery wall: it shows what stayed and says nothing about what left, and never speaks badly of it. No dashed "De fora" boxes, no "devolvi" lists, no reasons for leaving on the public page. What was left out still lives in her private record (the backstage), where "nothing is deleted" keeps holding. This overrides BRAND.md law 2 on the frontstage only.
+
 ## Approved lines (JJ)
 
 - PT: "Bom gosto merece nome e sobrenome." · "Na frente, o gosto. Por trás, a prova." · "O boca a boca ganhou escala. O registro, não." · "Gosto aparece quando não dá para ficar com tudo." · "Cada publi, com contrato e recibo." · "Por enquanto, é pouca gente. De propósito." · "Dê um sift e monte seu look."

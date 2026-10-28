@@ -62,7 +62,7 @@ export default function Home() {
           <h2>Bom gosto merece nome e sobrenome.</h2>
           <p className="quiet">
             Cada peça diz se é exatamente aquela ou uma parecida, e de onde veio a relação com a marca: orgânico, recebido, afiliado ou publi.
-            O que ela viu e deixou de fora continua lá, tracejado.
+           
           </p>
         </div>
       </section>
@@ -109,10 +109,6 @@ export default function Home() {
               <tr>
                 <td>Cupom e dupe</td>
                 <td className="quiet">Nunca.</td>
-              </tr>
-              <tr>
-                <td>O que saiu</td>
-                <td className="quiet">Não se apaga em silêncio.</td>
               </tr>
             </tbody>
           </table>

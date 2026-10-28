@@ -7,7 +7,7 @@ import { Mark } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Sift",
-  description: "Gosto, no registro. O que ela escolheu, o que deixou de fora e cada publi por trás da escolha.",
+  description: "Gosto, no registro. O que ela escolheu e cada publi por trás da escolha.",
 };
 
 export const viewport: Viewport = { themeColor: "#FFFFFF", width: "device-width", initialScale: 1 };

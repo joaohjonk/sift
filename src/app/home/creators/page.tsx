@@ -5,7 +5,7 @@ import { Rec } from "@/components/ui";
 
 const STEPS: [string, string][] = [
   ["Dê um sift no seu post", "A máquina acha cada peça na foto. Você diz se é exatamente aquela, parecida ou se sai."],
-  ["Fique com poucas", "A página mostra o que ficou e conta o que você viu. O que saiu continua no registro, tracejado."],
+  ["Fique com poucas", "A página mostra só o que ficou, como uma parede de galeria. O resto fica no seu registro, que só você vê."],
   ["Cada publi, com contrato e recibo", "A Sift lê o contrato, avisa se bate com uma exclusividade, confere o post, emite a nota e paga no Pix."],
 ];
 

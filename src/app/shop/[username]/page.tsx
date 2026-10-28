@@ -5,11 +5,11 @@ import { isFollowing } from "@/lib/repo";
 import { siftPage } from "@/lib/page";
 import { currentUser } from "@/lib/session";
 import { toggleFollow } from "../../actions";
-import { Flash, OutBox, Piece, Rec, recDate } from "@/components/ui";
+import { Flash, Piece, Rec, recDate } from "@/components/ui";
 import { CopyLink, ShareButton } from "@/components/share";
 
 // A Sift Page. Fala sempre em primeira pessoa: é o perfil dela, assinado por ela (JJ, 28 out).
-// Mostrar poucos, contar muitos; o que saiu fica no registro.
+// Como numa galeria: mostra só o que ficou. O que saiu nunca aparece na página pública (JJ, 28 out); fica no registro privado dela.
 
 export default async function SiftPageView({
   params,
@@ -87,13 +87,12 @@ export default async function SiftPageView({
       )}
 
       {page.sections.map((s, n) => {
-        const total = s.kept.length + s.left_out.length;
         return (
           <section key={s.id} className="section edit" aria-label={s.title}>
             <div className="grid12 edit-head">
               <div className="c-label">
                 <Rec>
-                  {String(n + 1).padStart(2, "0")} · Ficaram {s.kept.length} de {total}
+                  {String(n + 1).padStart(2, "0")} · {s.kept.length} {s.kept.length === 1 ? "peça" : "peças"}
                 </Rec>
                 {s.quote_source && <Rec className="quiet">{s.quote_source}</Rec>}
               </div>
@@ -106,23 +105,6 @@ export default async function SiftPageView({
                 <Piece key={p.pin_id} piece={p} href={`/go/${p.pin_id}`} index={i} />
               ))}
             </div>
-            {s.left_out.length > 0 && (
-              <div className="grid12" style={{ marginTop: 40 }}>
-                <div className="c-label">
-                  <Rec className="quiet">De fora, {s.left_out.length}</Rec>
-                  <p className="small quiet" style={{ marginTop: 8 }}>
-                    Testei, olhei de perto e deixei de fora. Fica no registro.
-                  </p>
-                </div>
-                <div className="c-body">
-                  <div className="left-out">
-                    {s.left_out.slice(0, 6).map((p) => (
-                      <OutBox key={p.pin_id} piece={p} />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
           </section>
         );
       })}
@@ -139,7 +121,6 @@ export default async function SiftPageView({
         <span>
           Cada relação comercial à vista: orgânico, recebido, afiliado, publi
         </span>
-        <span>Nada se apaga</span>
       </footer>
       <p className="small quiet" style={{ marginTop: 16 }}>
         As imagens dos produtos pertencem às marcas. <Link href="/shop">Ver todas as peças</Link>
