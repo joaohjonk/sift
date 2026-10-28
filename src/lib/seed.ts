@@ -1,6 +1,7 @@
 import type Database from "better-sqlite3";
 import { commissionFor } from "./money";
 import CATALOG from "./catalog.json";
+import { classify, type Format } from "./taxonomy";
 
 // Dados de demonstração. Marcas e criadores são fictícios.
 
@@ -237,44 +238,41 @@ export function seed(db: Database.Database) {
 // Fictícia. Peças reais do catálogo curado pelo JJ (recortes 4:5 no wash).
 // Publi e recebido só aparecem com as marcas fictícias, para não inventar deal com marca real.
 
-type Pin = { id: string; match?: "exact" | "similar"; out?: boolean };
-type Section = { title: string; source: string; pins: Pin[]; extra?: { prod: number; tie: "paid" | "gifted"; brand: number }[] };
-
-const CATALOG_CATEGORIES: Record<string, [string, string, string]> = {
-  womens: ["Moda", "Roupas", "Feminino"],
-  mens: ["Moda", "Roupas", "Masculino"],
-  accessories: ["Moda", "Acessórios", "Acessórios"],
-  beauty: ["Beleza", "Skincare", "Cuidados"],
-  fragrance: ["Beleza", "Perfumes", "Perfumes"],
-  home: ["Casa", "Objetos", "Objetos"],
-};
+// Sinais pessoais (doc da taxonomia): desde quando tenho, quantas vezes recomprei, ordem na rotina, par no high low.
+type Pin = { id: string; match?: "exact" | "similar"; out?: boolean; since?: string; again?: number; step?: number; pair?: string };
+type Section = { title: string; source: string; format: Format; pins: Pin[]; extra?: { prod: number; tie: "paid" | "gifted"; brand: number }[] };
 
 const CRIADORA: Section[] = [
   {
     title: "sempre comigo",
     source: "legenda de 14.05.26",
-    pins: [{ id: "mansur-candy-hobo" }, { id: "zerezes-nori" }, { id: "sayeg-serena" }, { id: "rhode-lip-vanilla" }, { id: "lemaire-croissant", match: "similar" }, { id: "toteme-clip-top-handle", out: true }, { id: "paloma-guida", out: true }],
+    format: "na_bolsa",
+    pins: [{ id: "mansur-candy-hobo" }, { id: "zerezes-nori", since: "2021" }, { id: "sayeg-serena" }, { id: "rhode-lip-vanilla", again: 6, since: "03.23" }, { id: "lemaire-croissant", match: "similar" }, { id: "toteme-clip-top-handle", out: true }, { id: "paloma-guida", out: true }],
   },
   {
     title: "high low, desde sempre",
     source: "legenda de 30.04.26",
-    pins: [{ id: "khaite-lotus" }, { id: "nk-jeans-aila" }, { id: "baserange-mason-tee", match: "similar" }, { id: "therow-soft-loafer" }, { id: "farm-bolsa-viva" }, { id: "jilsander-cannolo", out: true }],
+    format: "high_low",
+    pins: [{ id: "khaite-lotus", pair: "farm-bolsa-viva" }, { id: "farm-bolsa-viva" }, { id: "therow-soft-loafer", pair: "j01-loafer-black" }, { id: "j01-loafer-black" }, { id: "nk-jeans-aila", since: "2019" }, { id: "baserange-mason-tee", match: "similar" }, { id: "jilsander-cannolo", out: true }],
   },
   {
     title: "uniforme de verão",
     source: "legenda de 02.01.26",
-    pins: [{ id: "isolda-porcelana" }, { id: "cordera-wool-pants", match: "similar" }, { id: "birman-clarita-slingback" }, { id: "lapima-paloma" }, { id: "adriana-maillot-acrilico" }, { id: "crisbarros-lirio", match: "similar" }, { id: "aluf-borogodo", out: true }, { id: "margiela-tabi", out: true }],
+    format: "uniforme",
+    pins: [{ id: "isolda-porcelana", since: "2022" }, { id: "cordera-wool-pants", match: "similar" }, { id: "birman-clarita-slingback" }, { id: "lapima-paloma" }, { id: "adriana-maillot-acrilico" }, { id: "crisbarros-lirio", match: "similar" }, { id: "aluf-borogodo", out: true }, { id: "margiela-tabi", out: true }],
   },
   {
     title: "pele sem esforço",
     source: "legenda de 21.08.26",
-    pins: [{ id: "sallve-vitc-bastao" }, { id: "creamy-vitc-gold" }, { id: "care-rose-mist" }, { id: "bader-rich-cream", match: "similar" }, { id: "loewe-earth-elixir", out: true }],
+    format: "rotina",
+    pins: [{ id: "care-rose-mist", step: 1 }, { id: "creamy-vitc-gold", step: 2, again: 4 }, { id: "bader-rich-cream", match: "similar", step: 3 }, { id: "sallve-vitc-bastao", step: 4 }, { id: "loewe-earth-elixir", out: true }],
     extra: [{ prod: 1, tie: "paid", brand: 0 }],
   },
   {
     title: "casa com cheiro de casa",
     source: "legenda de 09.09.26",
-    pins: [{ id: "diptyque-figuier-candle" }, { id: "molle-bule" }, { id: "phebo-vela-icones" }, { id: "slj-la-donna", match: "similar" }, { id: "osklen-aroma-vento", out: true }],
+    format: "livre",
+    pins: [{ id: "diptyque-figuier-candle", again: 3 }, { id: "molle-bule" }, { id: "phebo-vela-icones" }, { id: "slj-la-donna", match: "similar" }, { id: "osklen-aroma-vento", out: true }],
     extra: [{ prod: 3, tie: "paid", brand: 1 }],
   },
 ];
@@ -303,7 +301,8 @@ function seedCriadora(
       const domain = new URL(item.url).hostname.replace(/^www\./, "");
       brandByName.set(item.brand, Number(insBrand.run(item.brand, domain).lastInsertRowid));
     }
-    const [ind, dep, name] = CATALOG_CATEGORIES[item.category] ?? ["Moda", "Acessórios", "Acessórios"];
+    const [ind, dep] = classify(item);
+    const name = dep;
     const key = `${ind}/${dep}/${name}`;
     if (!catId.has(key)) catId.set(key, Number(insCat.run(ind, dep, name).lastInsertRowid));
     const id = Number(
@@ -321,21 +320,27 @@ function seedCriadora(
       )
       .run("Moda, beleza e casa.", "Pouca coisa, escolhida devagar, usada até gastar.").lastInsertRowid,
   );
-  const insColl = db.prepare("INSERT INTO collections (user_id, name, kind, position, quote_source) VALUES (?, ?, 'shelf', ?, ?)");
+  const insColl = db.prepare("INSERT INTO collections (user_id, name, kind, position, quote_source, format) VALUES (?, ?, 'shelf', ?, ?, ?)");
   const insPin = db.prepare(
-    `INSERT INTO pins (user_id, product_id, collection_id, archived, match, tie, tie_brand, source, created_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, datetime('now', ?))`,
+    `INSERT INTO pins (user_id, product_id, collection_id, archived, match, tie, tie_brand, source, created_at, owned_since, repurchased, step)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, datetime('now', ?), ?, ?, ?)`,
   );
+  const setPair = db.prepare("UPDATE pins SET pair_pin = ? WHERE id = ?");
   const brandName = (i: number) => (db.prepare("SELECT name FROM brands WHERE id = ?").get(h.brandIds[i]) as { name: string }).name;
   CRIADORA.forEach((sec, i) => {
-    const coll = Number(insColl.run(user, sec.title, i + 1, sec.source).lastInsertRowid);
+    const coll = Number(insColl.run(user, sec.title, i + 1, sec.source, sec.format).lastInsertRowid);
     const post = `Post ${sec.source.replace("legenda de ", "")}`;
     const all = [
-      ...sec.pins.map((p) => ({ product: prod.get(p.id)!.id, price: prod.get(p.id)!.price, match: p.match ?? "exact", out: p.out ? 1 : 0, tie: "affiliate", brand: null as string | null })),
-      ...(sec.extra ?? []).map((e) => ({ product: h.prodIds[e.prod], price: 0, match: "exact", out: 0, tie: e.tie, brand: brandName(e.brand) })),
+      ...sec.pins.map((p) => ({ key: p.id, pin: p, product: prod.get(p.id)!.id, price: prod.get(p.id)!.price, match: p.match ?? "exact", out: p.out ? 1 : 0, tie: "affiliate", brand: null as string | null })),
+      ...(sec.extra ?? []).map((e) => ({ key: "", pin: {} as Pin, product: h.prodIds[e.prod], price: 0, match: "exact", out: 0, tie: e.tie, brand: brandName(e.brand) })),
     ];
+    const pinOf = new Map<string, number>();
     for (const p of all) {
-      const pinId = Number(insPin.run(user, p.product, coll, p.out, p.match, p.tie, p.brand, post, `-${20 + Math.floor(rand() * 60)} days`).lastInsertRowid);
+      const pinId = Number(
+        insPin.run(user, p.product, coll, p.out, p.match, p.tie, p.brand, post, `-${20 + Math.floor(rand() * 60)} days`, p.pin.since ?? null, p.pin.again ?? 0, p.pin.step ?? null)
+          .lastInsertRowid,
+      );
+      if (p.key) pinOf.set(p.key, pinId);
       if (p.out) continue;
       const n = 20 + Math.floor(rand() * 90);
       for (let k = 0; k < n; k++) {
@@ -346,5 +351,6 @@ function seedCriadora(
         }
       }
     }
+    for (const p of sec.pins) if (p.pair) setPair.run(pinOf.get(p.pair), pinOf.get(p.id));
   });
 }

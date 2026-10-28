@@ -18,9 +18,25 @@ export function openDb(file = process.env.SIFT_DB ?? DEFAULT_DB): DB {
   db.pragma("journal_mode = WAL");
   db.pragma("foreign_keys = ON");
   db.exec(SCHEMA);
+  migrate(db);
   const { n } = db.prepare("SELECT count(*) AS n FROM users").get() as { n: number };
   if (n === 0) seed(db);
   return db;
+}
+
+// Colunas novas em bancos já criados. CREATE TABLE IF NOT EXISTS não altera tabela existente.
+const COLUMNS: [string, string, string][] = [
+  ["collections", "format", "TEXT NOT NULL DEFAULT 'livre'"],
+  ["pins", "owned_since", "TEXT"],
+  ["pins", "repurchased", "INTEGER NOT NULL DEFAULT 0"],
+  ["pins", "step", "INTEGER"],
+  ["pins", "pair_pin", "INTEGER"],
+];
+function migrate(db: DB) {
+  for (const [table, col, type] of COLUMNS) {
+    const cols = db.prepare(`PRAGMA table_info(${table})`).all() as { name: string }[];
+    if (!cols.some((c) => c.name === col)) db.exec(`ALTER TABLE ${table} ADD COLUMN ${col} ${type}`);
+  }
 }
 
 /** Conexão única por processo (sobrevive ao hot reload do Next em dev). */

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { isFollowing } from "@/lib/repo";
 import { siftPage } from "@/lib/page";
+import { FORMATS } from "@/lib/taxonomy";
 import { currentUser } from "@/lib/session";
 import { toggleFollow } from "../../actions";
 import { Flash, Piece, Rec, recDate } from "@/components/ui";
@@ -97,7 +98,12 @@ export default async function SiftPageView({
                 {s.quote_source && <Rec className="quiet">{s.quote_source}</Rec>}
               </div>
               <div className="c-body">
-                <p className="quote">“{s.title}”</p>
+                <p className="quote">
+                  <Link href={`${path}/${s.id}`}>“{s.title}”</Link>
+                </p>
+                <p className="small" style={{ margin: "12px 0 0" }}>
+                  <Link href={`${path}/${s.id}`}>{FORMATS[s.format]?.label || "Ver a coleção"}</Link>
+                </p>
               </div>
             </div>
             <div className="six">

@@ -68,6 +68,7 @@ CREATE TABLE IF NOT EXISTS collections (
   kind        TEXT NOT NULL DEFAULT 'shelf' CHECK (kind IN ('shelf','look','post','guide')),
   position    INTEGER NOT NULL DEFAULT 0,
   quote_source TEXT,                       -- título nas palavras dela: de qual legenda e data veio
+  format      TEXT NOT NULL DEFAULT 'livre', -- parte flexível: rotina, high_low, na_bolsa... (lib/taxonomy)
   created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -83,6 +84,10 @@ CREATE TABLE IF NOT EXISTS pins (
   tie            TEXT NOT NULL DEFAULT 'organic' CHECK (tie IN ('organic','gifted','affiliate','paid')),  -- relação comercial visível
   tie_brand      TEXT,                          -- quem pagou ou mandou, quando há
   source         TEXT,                          -- de onde veio: "Post 14.05.26"
+  owned_since    TEXT,                          -- "tenho desde 2021", dito por ela
+  repurchased    INTEGER NOT NULL DEFAULT 0,    -- quantas vezes recomprou
+  step           INTEGER,                       -- ordem numa rotina
+  pair_pin       INTEGER,                       -- no high low: a peça que faz quase o mesmo
   created_at     TEXT NOT NULL DEFAULT (datetime('now'))
 );
 

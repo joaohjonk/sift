@@ -269,3 +269,21 @@ th { color: var(--color-quiet); border-bottom-color: var(--color-ink); }
   .split { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 760px) { .split-l, .split-r { grid-column: 1 / -1 !important; } }
+
+/* ---------- A coleção: filtros e formatos ---------- */
+.rec.signal { color: var(--color-ink); margin-top: 4px; }
+.filters { display: grid; gap: calc(var(--u) * 1.5); margin: calc(var(--u) * 3) 0 calc(var(--u) * 5); }
+.filters .line { display: flex; gap: calc(var(--u) * 1); flex-wrap: wrap; align-items: center; }
+.filters .line > .rec { min-width: 96px; color: var(--color-quiet); }
+.filters a { font-size: var(--rec); text-transform: uppercase; letter-spacing: calc(var(--font-tracking-record) * 1em); font-variant-numeric: tabular-nums;
+  min-height: 36px; display: inline-flex; align-items: center; padding: 0 12px; border: 1px solid var(--color-ghost); color: var(--color-ink); }
+.filters a:hover { text-decoration: none; border-color: var(--color-ink); }
+.filters a.on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-paper); }
+.routine { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--g); }
+.routine .n { font-size: var(--d3); letter-spacing: calc(var(--font-tracking-d3) * 1em); font-variant-numeric: tabular-nums; margin-bottom: calc(var(--u) * 1.5); }
+.total { display: flex; justify-content: space-between; align-items: baseline; border-top: var(--hair); margin-top: calc(var(--u) * 4); padding-top: calc(var(--u) * 2); }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--g); padding-bottom: calc(var(--u) * 5); margin-bottom: calc(var(--u) * 5); border-bottom: var(--hair); }
+.pair > div > .rec:first-child { margin-bottom: calc(var(--u) * 1.5); }
+.pair .diff { grid-column: 1 / -1; }
+@media (min-width: 900px) { .pair { grid-template-columns: repeat(4, minmax(0, 1fr)); } .pair .diff { grid-column: 3 / span 2; align-self: end; } }
+@media (max-width: 720px) { .routine { grid-template-columns: repeat(2, minmax(0, 1fr)); } .filters .line > .rec { min-width: 100%; } }
