@@ -3,7 +3,7 @@
   "metadata": {
     "brand_id": "sift",
     "name": "Sift",
-    "updated": "2026-10-27",
+    "updated": "2026-10-28",
     "owner": "JJ",
     "status": "imported",
     "stage": "prelaunch",
@@ -607,28 +607,25 @@
     "naming": {},
     "logo_marks": {
       "primary": {
-        "value": "The Sift square: a perfect square in Sift red #E8251A with SIFT whole in Helvetica Bold, white, edge to edge, flush to the lower margin (4% of the side). Alone (no name) under 24 px. Clear space a quarter of the side. Minimum 16 px alone, 32 px with the name.",
+        "value": "Red square with SIFT in Helvetica Bold",
         "input_class": "HARD_CONSTRAINT",
         "sources": [
           {
-            "kind": "official_asset",
-            "ref": "assets/official/BRAND.md#01",
-            "quote": "The Sift square. A perfect square in Sift red #E8251A with SIFT whole in Helvetica Bold, white, set edge to edge, flush to the lower margin (4% of the side).",
-            "captured_at": "2026-09-29",
-            "by": "brand-import"
+            "kind": "user_instruction",
+            "ref": "resolved CF-2026-10-27-logo by JJ"
           },
           {
-            "kind": "live_brand_behavior",
-            "ref": "assets/official/site-tokens.css",
-            "quote": ".mark{display:block;width:40px;height:40px;background:var(--red)",
-            "captured_at": "2026-10-01",
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#01",
+            "quote": "The Sift square. A perfect square in Sift red #E8251A with SIFT whole in Helvetica Bold",
+            "captured_at": "2026-09-29",
             "by": "brand-import"
           }
         ],
         "confidence": "high",
-        "last_updated": "2026-10-27",
+        "last_updated": "2026-10-28",
         "permanence": "core",
-        "approval": "conflict",
+        "approval": "current",
         "notes": "Open conflict CF-2026-10-27-logo with the Figma Identity page (plain SIFT wordmark, no square). Default until JJ resolves: the red square, as on sift.cc."
       },
       "never": {
@@ -790,28 +787,25 @@
     "textures": {},
     "typography": {
       "family": {
-        "value": "Helvetica (Helvetica Neue on Apple). The web ships TeX Gyre Heros as its free twin. One family everywhere.",
+        "value": "Helvetica only (TeX Gyre Heros on the web)",
         "input_class": "HARD_CONSTRAINT",
         "sources": [
           {
-            "kind": "official_asset",
-            "ref": "assets/official/BRAND.md#04",
-            "quote": "One family: Helvetica (Helvetica Neue on Apple devices). The web ships TeX Gyre Heros as its twin",
-            "captured_at": "2026-09-29",
-            "by": "brand-import"
+            "kind": "user_instruction",
+            "ref": "resolved CF-2026-10-27-type by JJ"
           },
           {
-            "kind": "live_brand_behavior",
-            "ref": "assets/official/site-tokens.css",
-            "quote": "--h:\"Helvetica Neue\",Helvetica,\"Heros\",Arial,sans-serif;",
-            "captured_at": "2026-10-01",
+            "kind": "official_asset",
+            "ref": "assets/official/BRAND.md#04",
+            "quote": "One family: Helvetica (Helvetica Neue on Apple devices).",
+            "captured_at": "2026-09-29",
             "by": "brand-import"
           }
         ],
         "confidence": "high",
-        "last_updated": "2026-10-27",
+        "last_updated": "2026-10-28",
         "permanence": "core",
-        "approval": "conflict",
+        "approval": "current",
         "notes": "Open conflict CF-2026-10-27-type with the Figma file (Switzer, Newsreader italic, Martian Mono). Default until JJ resolves: Helvetica only, as BRAND.md v3 and sift.cc."
       },
       "weights": {
@@ -1365,9 +1359,12 @@
         }
       ],
       "default_until_resolved": "Helvetica only",
-      "status": "open",
+      "status": "resolved",
       "owner": "JJ",
-      "notes": "BRAND.md v3 (29 Sep) is newer than the Figma build (28 Sep) and says Figma is a view of it. Its forbidden list bans serifs, which rules out Newsreader."
+      "notes": "BRAND.md v3 (29 Sep) is newer than the Figma build (28 Sep) and says Figma is a view of it. Its forbidden list bans serifs, which rules out Newsreader.",
+      "resolved": "2026-10-28",
+      "resolved_by": "JJ",
+      "picked": 1
     },
     {
       "id": "CF-2026-10-27-logo",
@@ -1395,9 +1392,12 @@
         }
       ],
       "default_until_resolved": "Red square",
-      "status": "open",
+      "status": "resolved",
       "owner": "JJ",
-      "notes": "sift.cc ships the red square today."
+      "notes": "sift.cc ships the red square today.",
+      "resolved": "2026-10-28",
+      "resolved_by": "JJ",
+      "picked": 1
     }
   ],
   "entities_ref": "brand/brand-world.json",

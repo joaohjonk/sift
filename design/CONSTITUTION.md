@@ -10,7 +10,7 @@ Em caso de conflito, ganha o de cima.
 2. `assets/official/BRAND.md` (brand system v3, 29 set 2026).
 3. `assets/official/COPY-SYSTEM.md`, depois `WRITING.md`.
 4. `brand/brand-system.json` e os tokens em `brand/tokens/`, que são a versão de máquina dos três acima.
-5. O Figma "Sift · Brand System v1". É uma vista do BRAND.md, não a fonte. Onde discorda (tipografia e logo), vale o BRAND.md até o JJ resolver os conflitos abertos.
+5. O Figma "Sift · Brand System v1". É uma vista do BRAND.md, não a fonte. Tipografia e logo foram decididos pelo JJ em 28 out 2026: vale o BRAND.md v3, Helvetica e o quadrado vermelho. O Figma precisa ser atualizado para bater.
 6. Referências externas e benchmarks, inclusive a ShopMy. A gente copia mecanismo, nunca aparência.
 
 ## Artigo 1 · A frase que julga tudo
@@ -79,8 +79,6 @@ Se uma tela não ajuda uma escolha a ganhar autor, histórico ou consequência, 
 
 | Ponto | Padrão até decidir | Quem decide |
 | --- | --- | --- |
-| Tipografia: Helvetica (BRAND.md v3) ou Switzer, Newsreader e Martian Mono (Figma) | Helvetica | JJ |
-| Logo: quadrado vermelho (BRAND.md v3, sift.cc) ou só o nome SIFT (Figma) | Quadrado vermelho | JJ |
 | Direção criativa v2: Verso, Livro ou Garimpo | O sistema atual desenha os três | JJ |
 | Modo escuro: só no app, seguindo o sistema do iPhone | Provisório | JJ |
 | Helvetica licenciada para o app nativo | TeX Gyre Heros | JJ |
